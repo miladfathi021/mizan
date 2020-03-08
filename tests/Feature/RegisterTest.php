@@ -58,6 +58,18 @@ class RegisterTest extends TestCase
     }
 
     /** @test **/
+    public function If_the_user_has_not_verified_their_number_they_can_request_a_new_code()
+    {
+        $this->withoutExceptionHandling();
+
+        $code = factory(PhoneVerification::class)->create();
+
+        $this->postJson('/api/v1/phone-verification', [
+            'phone' => $code->phone,
+        ])->assertJson(['status' => 201, 'phone' => $code->phone]);
+    }
+
+    /** @test **/
     public function The_user_must_enter_the_received_code_to_continue_registration()
     {
         $this->withoutExceptionHandling();

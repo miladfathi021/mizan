@@ -15,7 +15,7 @@ class CreatePhoneVerificationsTable extends Migration
     {
         Schema::create('phone-verifications', function (Blueprint $table) {
             $table->id();
-            $table->unsignedMediumInteger('phone');
+            $table->unsignedMediumInteger('phone')->unique();
             $table->unsignedMediumInteger('code');
             $table->unsignedSmallInteger('status')->default(0);
             $table->timestamps();

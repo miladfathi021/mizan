@@ -31,9 +31,25 @@ class PhoneVerifications extends Controller
                 'status' => 401,
                 'phone' => $result->phone
             ]);
+
+        } else if ($result != null && $result->status == 0) {
+
+            $code = rand(1001, 9998);
+
+            $result->update([
+                'code' => $code
+            ]);
+
+            //        <<< Event send verification code Sms  >>>
+            event(new PhoneVerificationEvent($result));
+
+            return response()->json([
+                'status' => 201,
+                'phone' => $result->phone,
+            ]);
         }
 
-        $code = rand(1234, 9998);
+        $code = rand(1001, 9998);
 
         $phone_verification = PhoneVerification::create([
             'phone' => request()->phone,
