@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5230ede0-cb53-41ab-80e8-27fa5808bb1f" name="Default Changelist" comment="" />
+    <list default="true" id="5230ede0-cb53-41ab-80e8-27fa5808bb1f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/PhoneVerifications.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/PhoneVerifications.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Mizan/Sms/SmsIr_sendVerificationCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mizan/Sms/SmsIr_sendVerificationCode.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_06_205345_create_phone-verifications_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_06_205345_create_phone-verifications_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/RegisterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/RegisterTest.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +19,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -116,6 +126,7 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1Yl8ONiPgpHWYD1d8mIIFw815tT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -123,28 +134,29 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="PHPUnit.RegisterTest.code_should_be_at_most_4_number">
-    <configuration name="RegisterTest.Verification_code_should_be_number" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" method="Verification_code_should_be_number" scope="Method" />
+  <component name="RunManager" selected="PHPUnit.RegisterTest">
+    <configuration name="RegisterTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="RegisterTest.code_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" method="code_is_required" scope="Method" />
+    <configuration name="RegisterTest.If_the_user_enters_the_code_after_5_minute_the_code_should_expire" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" method="If_the_user_enters_the_code_after_5_minute_the_code_should_expire" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="RegisterTest.code_should_be_at_least_4_chars" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" method="code_should_be_at_least_4_chars" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="RegisterTest.code_should_be_at_least_4_number" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" method="code_should_be_at_least_4_number" scope="Method" />
+    <configuration name="RegisterTest.The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" method="The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="RegisterTest.code_should_be_at_most_4_number" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" method="code_should_be_at_most_4_number" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RegisterTest.the_user_can_register_on_the_site" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" method="the_user_can_register_on_the_site" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -153,11 +165,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.RegisterTest" />
+        <item itemvalue="PHPUnit.RegisterTest.If_the_user_enters_the_code_after_5_minute_the_code_should_expire" />
+        <item itemvalue="PHPUnit.RegisterTest.The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed" />
+        <item itemvalue="PHPUnit.RegisterTest.the_user_can_register_on_the_site" />
         <item itemvalue="PHPUnit.RegisterTest.code_should_be_at_most_4_number" />
-        <item itemvalue="PHPUnit.RegisterTest.code_should_be_at_least_4_number" />
-        <item itemvalue="PHPUnit.RegisterTest.code_is_required" />
-        <item itemvalue="PHPUnit.RegisterTest.Verification_code_should_be_number" />
-        <item itemvalue="PHPUnit.RegisterTest.code_should_be_at_least_4_chars" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +186,8 @@
       <workItem from="1583505795371" duration="9935000" />
       <workItem from="1583561708514" duration="4607000" />
       <workItem from="1583603793350" duration="10185000" />
-      <workItem from="1583649250058" duration="239000" />
+      <workItem from="1583649250058" duration="5258000" />
+      <workItem from="1583682607173" duration="277000" />
     </task>
     <servers />
   </component>
@@ -202,30 +215,30 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="482" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1583570300474" />
-    <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1583621308529">
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1583657047349">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583621308529" />
-    <state width="1440" height="255" key="GridCell.Tab.0.center" timestamp="1583621308528">
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583657047349" />
+    <state width="1440" height="255" key="GridCell.Tab.0.center" timestamp="1583657047347">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583621308528" />
-    <state width="1440" height="255" key="GridCell.Tab.0.left" timestamp="1583621308528">
+    <state width="1440" height="255" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583657047347" />
+    <state width="1440" height="255" key="GridCell.Tab.0.left" timestamp="1583657047346">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583621308528" />
-    <state width="1440" height="255" key="GridCell.Tab.0.right" timestamp="1583621308529">
+    <state width="1440" height="255" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583657047346" />
+    <state width="1440" height="255" key="GridCell.Tab.0.right" timestamp="1583657047348">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583621308529" />
+    <state width="1440" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583657047348" />
     <state x="497" y="257" key="NewPhpClassDialog" timestamp="1583570261891">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="497" y="257" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1583570261891" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1583620950943">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1583657024013">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1583620950943" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1583657024013" />
     <state x="482" y="71" key="refactoring.ChangeSignatureDialog" timestamp="1583566748473">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

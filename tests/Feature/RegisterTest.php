@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\PhoneVerification;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Carbon;
 use Tests\TestCase;
 
 class RegisterTest extends TestCase
@@ -26,6 +27,18 @@ class RegisterTest extends TestCase
             'phone' => $phone,
             'status' => 0
         ]);
+    }
+
+    /** @test **/
+    public function The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed()
+    {
+        $this->withoutExceptionHandling();
+
+        $code = factory(PhoneVerification::class)->create(['status' => 1]);
+
+        $this->postJson('/api/v1/phone-verification', [
+            'phone' => $code->phone,
+        ])->assertJson(['status' => 401, 'phone' => $code->phone]);
     }
 
     /** @test **/
@@ -115,5 +128,17 @@ class RegisterTest extends TestCase
             'phone' => '09123456789',
         ])->assertJsonValidationErrors(['code']);
     }
-    
+
+    /** @test **/
+    public function If_the_user_enters_the_code_after_5_minute_the_code_should_expire()
+    {
+        $this->withoutExceptionHandling();
+
+        $code = factory(PhoneVerification::class)->create(['created_at' => Carbon::now()->subMinutes(5)->toDateTimeString()]);
+
+        $this->post('/api/v1/success-phone-verification', [
+            'code' => $code->code,
+            'phone' => $code->phone,
+        ])->assertJson(['status' => 401]);
+    }
 }

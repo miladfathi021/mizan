@@ -22,7 +22,7 @@ class SmsIr_sendVerificationCode
         $phone = [$this->phone_verification['phone']];
 
         $message = [];
-        $message[] = "کاربر گرامی با تشکر از ثبت نام شما کد ثبت نام:" . $this->phone_verification['code'];
+        $message[] = "کد ثبت نام:" . $this->phone_verification['code'] . " میزان";
 
         $result = Http::withHeaders([
             'x-sms-ir-secure-token' => $this->token
