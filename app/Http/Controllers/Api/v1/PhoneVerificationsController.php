@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
-class PhoneVerifications extends Controller
+class PhoneVerificationsController extends Controller
 {
     use SoftDeletes;
 

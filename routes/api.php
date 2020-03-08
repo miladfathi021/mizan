@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('v1')->namespace('v1')->group(function () {
-    Route::post('/phone-verification', 'PhoneVerifications@store')->name('phone-verification.store');
-    Route::post('/success-phone-verification', 'PhoneVerifications@check')->name('success-phone-verification.check');
+    Route::post('/phone-verification', 'PhoneVerificationsController@store')->name('phone-verification.store');
+    Route::post('/success-phone-verification', 'PhoneVerificationsController@check')->name('success-phone-verification.check');
+
+    Route::post('/register', 'RegisterController@store')->name('register.store');
 });
