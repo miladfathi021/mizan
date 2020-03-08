@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5230ede0-cb53-41ab-80e8-27fa5808bb1f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/PhoneVerifications.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/PhoneVerifications.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mizan/Sms/SmsIr_sendVerificationCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mizan/Sms/SmsIr_sendVerificationCode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_06_205345_create_phone-verifications_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_06_205345_create_phone-verifications_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/RegisterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/RegisterTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/RegisterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,23 +135,23 @@
   </component>
   <component name="RunManager" selected="PHPUnit.RegisterTest">
     <configuration name="RegisterTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" scope="Class" />
+      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="RegisterTest.If_the_user_enters_the_code_after_5_minute_the_code_should_expire" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" method="If_the_user_enters_the_code_after_5_minute_the_code_should_expire" scope="Method" />
+      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" method="If_the_user_enters_the_code_after_5_minute_the_code_should_expire" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="RegisterTest.If_the_user_has_not_verified_their_number_they_can_request_a_new_code" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" method="If_the_user_has_not_verified_their_number_they_can_request_a_new_code" scope="Method" />
+      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" method="If_the_user_has_not_verified_their_number_they_can_request_a_new_code" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="RegisterTest.The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" method="The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed" scope="Method" />
+      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" method="The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="RegisterTest.the_user_can_register_on_the_site" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" method="the_user_can_register_on_the_site" scope="Method" />
+      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" method="the_user_can_register_on_the_site" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -186,7 +182,7 @@
       <workItem from="1583561708514" duration="4607000" />
       <workItem from="1583603793350" duration="10185000" />
       <workItem from="1583649250058" duration="5258000" />
-      <workItem from="1583682607173" duration="4936000" />
+      <workItem from="1583682607173" duration="5369000" />
     </task>
     <servers />
   </component>
@@ -210,10 +206,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="408" y="185" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1583530099502" />
-    <state x="482" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583570300474">
+    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583699215583">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="482" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1583570300474" />
+    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1583699215583" />
     <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1583698595855">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

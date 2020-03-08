@@ -8,7 +8,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Carbon;
 use Tests\TestCase;
 
-class RegisterTest extends TestCase
+class PhoneVerificationTest extends TestCase
 {
     use RefreshDatabase;
 
