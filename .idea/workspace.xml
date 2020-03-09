@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5230ede0-cb53-41ab-80e8-27fa5808bb1f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/mizan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mizan.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/PhoneVerificationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/PhoneVerificationsController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -204,7 +199,7 @@
       <workItem from="1583603793350" duration="10185000" />
       <workItem from="1583649250058" duration="5258000" />
       <workItem from="1583682607173" duration="9626000" />
-      <workItem from="1583734840314" duration="4206000" />
+      <workItem from="1583734840314" duration="4916000" />
     </task>
     <servers />
   </component>
@@ -232,30 +227,30 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1583701066952" />
-    <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1583741794170">
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1583741853046">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583741794170" />
-    <state width="1440" height="255" key="GridCell.Tab.0.center" timestamp="1583741794168">
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583741853046" />
+    <state width="1440" height="255" key="GridCell.Tab.0.center" timestamp="1583741853044">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583741794168" />
-    <state width="1440" height="255" key="GridCell.Tab.0.left" timestamp="1583741794167">
+    <state width="1440" height="255" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583741853044" />
+    <state width="1440" height="255" key="GridCell.Tab.0.left" timestamp="1583741853043">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583741794167" />
-    <state width="1440" height="255" key="GridCell.Tab.0.right" timestamp="1583741794169">
+    <state width="1440" height="255" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583741853043" />
+    <state width="1440" height="255" key="GridCell.Tab.0.right" timestamp="1583741853045">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583741794169" />
+    <state width="1440" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583741853045" />
     <state x="497" y="257" key="NewPhpClassDialog" timestamp="1583570261891">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="497" y="257" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1583570261891" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1583741695992">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1583742368486">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1583741695992" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1583742368486" />
     <state x="482" y="71" key="refactoring.ChangeSignatureDialog" timestamp="1583566748473">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

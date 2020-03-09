@@ -29,6 +29,7 @@ class PhoneVerificationsController extends Controller
         if ($result != null && $result->status == 1) {
             return response()->json([
                 'status' => 401,
+                'message' => 'این شماره قبلا ثبت شده است.',
                 'phone' => $result->phone
             ]);
 
@@ -81,6 +82,7 @@ class PhoneVerificationsController extends Controller
 
             return response()->json([
                 'status' => 401,
+                'message' => 'کد وارد شده منقضی شده است لطفا بر روی ارسال مجدد کلیک کنید.',
                 'phone' => request()->phone
             ]);
 
@@ -92,12 +94,14 @@ class PhoneVerificationsController extends Controller
 
             return response()->json([
                 'status' => 200,
+                'message' => 'شماره موبایل شما با موفقیت تایید شد.',
                 'phone' => $result->phone
             ]);
         }
 
         return response()->json([
             'status' => 404,
+            'message' => 'کد وارد شده نامعتبر است',
             'phone' => request()->phone
         ]);
     }

@@ -11,17 +11,15 @@ class LoginController extends Controller
     public function login()
     {
 
-        request()->validate([
+        $validate = request()->validate([
             'phone' => 'required|exists:users,phone',
             'password' => 'required|min:6',
         ]);
 
-        if (! auth()->attempt([
-            'phone' => request()->phone,
-            'password' => request()->password
-        ])) {
+        if (! auth()->attempt($validate)) {
             return response()->json([
-                'status' => 403
+                'status' => 403,
+                'message' => 'اطلاعات وارد شده صحیح نمی باشد'
             ]);
         }
 
