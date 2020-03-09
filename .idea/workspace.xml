@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5230ede0-cb53-41ab-80e8-27fa5808bb1f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/mizan.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mizan.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/PhoneVerifications.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/PhoneVerificationsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,6 +125,19 @@
       <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/php-http/message-factory" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/league/event" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth2-server" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/symfony/psr-http-message-bridge" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-diactoros" />
+      <path value="$PROJECT_DIR$/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/vendor/defuse/php-encryption" />
+      <path value="$PROJECT_DIR$/vendor/laravel/passport" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+      <path value="$PROJECT_DIR$/vendor/phpseclib/phpseclib" />
+      <path value="$PROJECT_DIR$/vendor/nyholm/psr7" />
     </include_path>
   </component>
   <component name="ProjectId" id="1Yl8ONiPgpHWYD1d8mIIFw815tT" />
@@ -133,43 +148,44 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
-  <component name="RunManager" selected="PHPUnit.RegisterTest">
-    <configuration name="RegisterTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.LoginTest.password_is_required">
+    <configuration name="LoginTest.password_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LoginTest.php" method="password_is_required" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="RegisterTest.password_and_password_confirmation_must_be_equal" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" method="password_and_password_confirmation_must_be_equal" scope="Method" />
+    <configuration name="LoginTest.phone_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LoginTest.php" method="phone_is_required" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="RegisterTest.password_confirmation_is_required_for_create_a_new_account" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" method="password_confirmation_is_required_for_create_a_new_account" scope="Method" />
+    <configuration name="LoginTest.phone_should_be_exists" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LoginTest.php" method="phone_should_be_exists" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="RegisterTest.password_is_required_for_create_a_new_account" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" method="password_is_required_for_create_a_new_account" scope="Method" />
-      <method v="2" />
-    </configuration>
-    <configuration name="RegisterTest.phone_should_be_unique" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\RegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/RegisterTest.php" method="phone_should_be_unique" scope="Method" />
+    <configuration name="LoginTest.user_can_login" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LoginTest.php" method="user_can_login" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="tests" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.RegisterTest" />
-        <item itemvalue="PHPUnit.RegisterTest.phone_should_be_unique" />
-        <item itemvalue="PHPUnit.RegisterTest.password_and_password_confirmation_must_be_equal" />
-        <item itemvalue="PHPUnit.RegisterTest.password_confirmation_is_required_for_create_a_new_account" />
-        <item itemvalue="PHPUnit.RegisterTest.password_is_required_for_create_a_new_account" />
+        <item itemvalue="PHPUnit.LoginTest.password_is_required" />
+        <item itemvalue="PHPUnit.LoginTest.phone_should_be_exists" />
+        <item itemvalue="PHPUnit.LoginTest.phone_is_required" />
+        <item itemvalue="PHPUnit.LoginTest.user_can_login" />
+        <item itemvalue="PHPUnit.tests" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +203,8 @@
       <workItem from="1583561708514" duration="4607000" />
       <workItem from="1583603793350" duration="10185000" />
       <workItem from="1583649250058" duration="5258000" />
-      <workItem from="1583682607173" duration="9417000" />
+      <workItem from="1583682607173" duration="9626000" />
+      <workItem from="1583734840314" duration="4206000" />
     </task>
     <servers />
   </component>
@@ -203,10 +220,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="351" y="60" key="#RegisterTest.the_user_can_register_on_the_site/0.0.1440.900@0.0.1440.900" timestamp="1583519051885" />
-    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1583526308423">
+    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1583740696835">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1583526308423" />
+    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1583740696835" />
     <state x="408" y="185" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583530099502">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -215,37 +232,37 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1583701066952" />
-    <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1583703546970">
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1583741794170">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583703546970" />
-    <state width="1440" height="255" key="GridCell.Tab.0.center" timestamp="1583703546968">
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583741794170" />
+    <state width="1440" height="255" key="GridCell.Tab.0.center" timestamp="1583741794168">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583703546968" />
-    <state width="1440" height="255" key="GridCell.Tab.0.left" timestamp="1583703546967">
+    <state width="1440" height="255" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583741794168" />
+    <state width="1440" height="255" key="GridCell.Tab.0.left" timestamp="1583741794167">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583703546967" />
-    <state width="1440" height="255" key="GridCell.Tab.0.right" timestamp="1583703546969">
+    <state width="1440" height="255" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583741794167" />
+    <state width="1440" height="255" key="GridCell.Tab.0.right" timestamp="1583741794169">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583703546969" />
+    <state width="1440" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583741794169" />
     <state x="497" y="257" key="NewPhpClassDialog" timestamp="1583570261891">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="497" y="257" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1583570261891" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1583703543737">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1583741695992">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1583703543737" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1583741695992" />
     <state x="482" y="71" key="refactoring.ChangeSignatureDialog" timestamp="1583566748473">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="482" y="71" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1583566748473" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1583700910276">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1583736148593">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1583700910276" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1583736148593" />
   </component>
 </project>

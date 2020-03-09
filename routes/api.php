@@ -19,4 +19,5 @@ Route::prefix('v1')->namespace('v1')->group(function () {
     Route::post('/success-phone-verification', 'PhoneVerificationsController@check')->name('success-phone-verification.check');
 
     Route::post('/register', 'RegisterController@store')->name('register.store');
+    Route::post('/login', 'LoginController@login')->name('login.login');
 });
