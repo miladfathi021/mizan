@@ -31,14 +31,15 @@ class PhoneVerificationsController extends Controller
                 'status' => 401,
                 'message' => 'این شماره قبلا ثبت شده است.',
                 'phone' => $result->phone
-            ]);
+            ], 401);
 
         } else if ($result != null && $result->status == 0) {
 
             $code = rand(1001, 9998);
 
             $result->update([
-                'code' => $code
+                'code' => $code,
+                'created_at' => Carbon::now(),
             ]);
 
             //        <<< Event send verification code Sms  >>>
@@ -78,7 +79,7 @@ class PhoneVerificationsController extends Controller
         $result = PhoneVerification::where('phone', request()->phone)->where('code', request()->code)->first();
 
 
-        if ($result && gmdate($result->created_at->diffInSeconds(Carbon::now())) >= 300) {
+        if ($result && gmdate($result->updated_at->diffInSeconds(Carbon::now())) >= 300) {
 
             return response()->json([
                 'status' => 401,

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api\v1;
+namespace App\Http\Controllers\Api\v1\users;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\v1\User as UserResource;
@@ -12,15 +12,15 @@ class LoginController extends Controller
     {
 
         $validate = request()->validate([
-            'phone' => 'required|exists:users,phone',
+            'phone' => 'required',
             'password' => 'required|min:6',
         ]);
 
         if (! auth()->attempt($validate)) {
             return response()->json([
-                'status' => 403,
+                'status' => 401,
                 'message' => 'اطلاعات وارد شده صحیح نمی باشد'
-            ], 403);
+            ], 401);
         }
 
 //        Delete All Tokens
