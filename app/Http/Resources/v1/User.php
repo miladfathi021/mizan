@@ -25,7 +25,7 @@ class User extends JsonResource
         return [
             'name' => $this->name,
             'phone' => $this->phone,
-            'api_token' => "Bearer " . $this->token,
+            'api_token' => $this->token,
         ];
     }
 

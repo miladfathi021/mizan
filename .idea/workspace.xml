@@ -3,14 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5230ede0-cb53-41ab-80e8-27fa5808bb1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/users/LoginController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/PhoneVerificationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/PhoneVerificationsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/users/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/pagination.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/v1/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/v1/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/LoginTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/LoginTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -161,13 +157,13 @@
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Api/v1/users" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.PhoneVerificationTest.If_the_user_has_not_verified_their_number_they_can_request_a_new_code">
+  <component name="RunManager" selected="PHPUnit.tests">
     <configuration name="LoginTest.password_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LoginTest.php" method="password_is_required" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="LoginTest.phone_should_be_exists" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\LoginTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LoginTest.php" method="phone_should_be_exists" scope="Method" />
+    <configuration name="PhoneVerificationTest.If_the_user_enters_the_code_after_5_minute_the_code_should_expire" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\PhoneVerificationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" method="If_the_user_enters_the_code_after_5_minute_the_code_should_expire" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="PhoneVerificationTest.If_the_user_has_not_verified_their_number_they_can_request_a_new_code" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -188,11 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.PhoneVerificationTest.If_the_user_has_not_verified_their_number_they_can_request_a_new_code" />
         <item itemvalue="PHPUnit.tests" />
+        <item itemvalue="PHPUnit.PhoneVerificationTest.If_the_user_enters_the_code_after_5_minute_the_code_should_expire" />
+        <item itemvalue="PHPUnit.PhoneVerificationTest.If_the_user_has_not_verified_their_number_they_can_request_a_new_code" />
         <item itemvalue="PHPUnit.RegisterTest.The_user_can_create_a_new_account_after_confirming_the_mobile_number" />
         <item itemvalue="PHPUnit.LoginTest.password_is_required" />
-        <item itemvalue="PHPUnit.LoginTest.phone_should_be_exists" />
       </list>
     </recent_temporary>
   </component>
@@ -212,7 +208,7 @@
       <workItem from="1583649250058" duration="5258000" />
       <workItem from="1583682607173" duration="9626000" />
       <workItem from="1583734840314" duration="6425000" />
-      <workItem from="1583771713880" duration="5728000" />
+      <workItem from="1583771713880" duration="6350000" />
     </task>
     <servers />
   </component>
@@ -240,37 +236,37 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1583701066952" />
-    <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1583780177015">
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1583784050733">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583780177015" />
-    <state width="1440" height="255" key="GridCell.Tab.0.center" timestamp="1583780177013">
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583784050733" />
+    <state width="1440" height="255" key="GridCell.Tab.0.center" timestamp="1583784050730">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583780177013" />
-    <state width="1440" height="255" key="GridCell.Tab.0.left" timestamp="1583780177012">
+    <state width="1440" height="255" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583784050730" />
+    <state width="1440" height="255" key="GridCell.Tab.0.left" timestamp="1583784050729">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583780177012" />
-    <state width="1440" height="255" key="GridCell.Tab.0.right" timestamp="1583780177014">
+    <state width="1440" height="255" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583784050729" />
+    <state width="1440" height="255" key="GridCell.Tab.0.right" timestamp="1583784050732">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583780177014" />
+    <state width="1440" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583784050732" />
     <state x="497" y="257" key="NewPhpClassDialog" timestamp="1583570261891">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="497" y="257" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1583570261891" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1583782138617">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1583784023750">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1583782138617" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1583784023750" />
     <state x="482" y="71" key="refactoring.ChangeSignatureDialog" timestamp="1583566748473">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="482" y="71" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1583566748473" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1583778669019">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1583783455974">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1583778669019" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1583783455974" />
   </component>
 </project>

@@ -24,3 +24,10 @@ Route::prefix('v1')->namespace('v1\users')->group(function () {
     Route::post('/register', 'RegisterController@store')->name('register.store');
     Route::post('/login', 'LoginController@login')->name('login.login');
 });
+
+
+Route::prefix('v1')->namespace('v1')->middleware(['auth:api'])->group(function () {
+    Route::get('/test', function () {
+        return 'yes';
+    });
+});

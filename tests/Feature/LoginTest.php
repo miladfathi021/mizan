@@ -37,15 +37,6 @@ class LoginTest extends TestCase
     }
 
     /** @test **/
-    public function phone_should_be_exists()
-    {
-        $this->postJson('/api/v1/login', [
-            'phone' => '09210000000',
-            'password' => 'password'
-        ])->assertJsonValidationErrors(['phone']);
-    }
-
-    /** @test **/
     public function password_is_required()
     {
         $this->postJson('/api/v1/login', [

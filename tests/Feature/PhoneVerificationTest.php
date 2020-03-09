@@ -146,7 +146,7 @@ class PhoneVerificationTest extends TestCase
     {
         $this->withoutExceptionHandling();
 
-        $code = factory(PhoneVerification::class)->create(['created_at' => Carbon::now()->subMinutes(5)->toDateTimeString()]);
+        $code = factory(PhoneVerification::class)->create(['updated_at' => Carbon::now()->subMinutes(5)->toDateTimeString()]);
 
         $this->post('/api/v1/success-phone-verification', [
             'code' => $code->code,
