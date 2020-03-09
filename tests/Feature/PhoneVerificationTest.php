@@ -97,7 +97,7 @@ class PhoneVerificationTest extends TestCase
         $this->post('/api/v1/success-phone-verification', [
             'code' => 1123,
             'phone' => $code->phone,
-        ])->assertJson(['status' => 404]);
+        ])->assertJson(['status' => 401]);
 
         $this->assertDatabaseHas('phone-verifications', [
             'phone' => $code->phone,

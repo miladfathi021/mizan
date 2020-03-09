@@ -84,7 +84,7 @@ class PhoneVerificationsController extends Controller
                 'status' => 401,
                 'message' => 'کد وارد شده منقضی شده است لطفا بر روی ارسال مجدد کلیک کنید.',
                 'phone' => request()->phone
-            ]);
+            ], 401);
 
         } else if ($result) {
 
@@ -96,13 +96,13 @@ class PhoneVerificationsController extends Controller
                 'status' => 200,
                 'message' => 'شماره موبایل شما با موفقیت تایید شد.',
                 'phone' => $result->phone
-            ]);
+            ], 200);
         }
 
         return response()->json([
-            'status' => 404,
+            'status' => 401,
             'message' => 'کد وارد شده نامعتبر است',
             'phone' => request()->phone
-        ]);
+        ], 401);
     }
 }

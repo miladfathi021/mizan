@@ -20,7 +20,7 @@ class LoginController extends Controller
             return response()->json([
                 'status' => 403,
                 'message' => 'اطلاعات وارد شده صحیح نمی باشد'
-            ]);
+            ], 403);
         }
 
 //        Delete All Tokens
