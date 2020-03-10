@@ -16,18 +16,20 @@ class LawyerRegisterTest extends TestCase
     {
         $this->withoutExceptionHandling();
 
-        $phone = factory(PhoneVerification::class)->create(['status' => 1]);
-
-        $this->postJson('api/v1/register', [
+        $this->postJson('api/v1/lawyer-contracts/register', [
             'name' => 'John Doe',
-            'phone' => $phone->phone,
-            'password' => 'password',
-            'password_confirmation' => 'password'
+            'license_number' => '1234567',
+            'national_no' => '1234567890',
+            'province' => 'tehran',
+            'city' => 'tehran',
+            'phone' => '09215420796',
+            'lawyer_experience' => 12,
+            'internet_consultation' => 3,
         ])->assertJson(['status' => 201]);
 
-        $this->assertDatabaseHas('users', [
+        $this->assertDatabaseHas('lawyer_contracts', [
             'name' => 'John Doe',
-            'phone' => $phone->phone,
+            'phone' => '09215420796',
         ]);
     }
 }

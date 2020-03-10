@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5230ede0-cb53-41ab-80e8-27fa5808bb1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Events/PhoneVerificationEvent.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Events/PhoneVerificationEvent.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mizan/Sms/SmsIr_GetToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mizan/Sms/SmsIr_GetToken.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mizan/Sms/SmsIr_sendVerificationCode.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mizan/Sms/SmsIr_sendVerificationCode.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/RegisterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/UserRegisterTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +135,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1Yl8ONiPgpHWYD1d8mIIFw815tT" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
