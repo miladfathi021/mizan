@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="{{ asset('/css/app.css') }}">
 
         <!-- Styles -->
         <style>
@@ -83,6 +84,8 @@
                 <div class="title m-b-md">
                     Laravel
                 </div>
+
+                <p style="font-size: 2rem;">به هر طریقی که می‌‌اندیشید از جمله گزارش اشکالات، اصلاح قلم، پیشنهاد، انتقاد، معرفی به دیگران، ساخت قلم جدید از روی آن و ... مشارکت نمایید مایه دلگرمیست.</p>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
