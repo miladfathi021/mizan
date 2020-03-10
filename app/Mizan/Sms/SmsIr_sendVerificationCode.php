@@ -19,6 +19,7 @@ class SmsIr_sendVerificationCode
 
     public function store()
     {
+//        dd($this->token);
         $phone = [$this->phone_verification['phone']];
 
         $message = [];

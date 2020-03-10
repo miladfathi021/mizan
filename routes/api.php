@@ -20,7 +20,6 @@ Route::prefix('v1')->namespace('v1')->group(function () {
 });
 
 Route::prefix('v1')->namespace('v1\users')->group(function () {
-
     Route::post('/register', 'RegisterController@store')->name('register.store');
     Route::post('/login', 'LoginController@login')->name('login.login');
 });

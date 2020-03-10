@@ -19,7 +19,7 @@ class PhoneVerificationEvent
     /**
      * Create a new event instance.
      *
-     * @return void
+     * @param $phone_verification
      */
     public function __construct($phone_verification)
     {
