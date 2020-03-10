@@ -14,19 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Phone Verification
 Route::prefix('v1')->namespace('v1')->group(function () {
     Route::post('/phone-verification', 'PhoneVerificationsController@store')->name('phone-verification.store');
     Route::post('/success-phone-verification', 'PhoneVerificationsController@check')->name('success-phone-verification.check');
 });
 
+// User
 Route::prefix('v1')->namespace('v1\users')->group(function () {
     Route::post('/register', 'RegisterController@store')->name('register.store');
     Route::post('/login', 'LoginController@login')->name('login.login');
 });
 
-
-Route::prefix('v1')->namespace('v1')->middleware(['auth:api'])->group(function () {
-    Route::get('/test', function () {
-        return 'yes';
-    });
+// Lawyer
+Route::prefix('v1')->namespace('v1\lawyer')->group(function () {
+    Route::post('/lawyer-contracts', 'LawyerContractsController@store')->name('lawyer-contracts.store');
 });
