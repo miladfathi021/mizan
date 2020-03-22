@@ -14001,10 +14001,14 @@ a:active {
 
 html {
   font-size: 62.5%;
+  width: 100%;
 }
 
 body {
   direction: rtl;
+  line-height: 1.6;
+  font-family: "Vazir-Light", sans-serif;
+  height: 90rem;
 }
 
 .container {
@@ -14012,6 +14016,71 @@ body {
   min-width: 120rem;
   margin-left: auto;
   margin-right: auto;
+}
+
+.navigation {
+  width: 100%;
+  background-color: #4c51bf;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+}
+
+.navigation__content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 1.8rem 0;
+  transition: all 0.5s;
+}
+
+.navigation__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  align-items: center;
+  list-style: none;
+  font-family: "Vazir-Light";
+  color: #ffffff;
+}
+
+.navigation__item {
+  font-size: 1.8rem;
+}
+
+.navigation__item:last-child {
+  grid-column: -1/-2;
+  justify-self: left;
+  padding: 0.5rem 1.5rem;
+  background-color: #ffffff;
+  color: #713DFF;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font-family: "Vazir-Thin";
+}
+
+.navigation__item a {
+  transition: all 0.2s;
+}
+
+.navigation__item:not(:last-child) a:hover {
+  color: #200077;
+  font-size: 1.88rem;
+}
+
+.navigation__item:last-child:hover {
+  box-shadow: 0 0 1rem rgba(32, 0, 119, 0.4);
+}
+
+.navigation__logo {
+  height: 10rem;
+}
+
+.navigation--scroll {
+  background-color: #713DFF;
+}
+
+.navigation--scroll .navigation__content {
+  padding: 0.4rem 0 !important;
 }
 
 @media (min-width: 640px){
