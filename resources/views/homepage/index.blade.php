@@ -1,11 +1,13 @@
 @extends('layouts.master')
 
+@section('link')
+    <link rel="stylesheet" href="{{ asset('css/line-awesome.min.css') }}">
+@endsection
+
 @section('app_name')
     میزان - مشاوره آنلاین در زمینه وکالت
 @endsection
 
 @section('content')
-    <div class="container">
-{{--        <router-view></router-view>--}}
-    </div>
+        <router-view></router-view>
 @endsection

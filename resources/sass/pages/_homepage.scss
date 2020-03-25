@@ -1,0 +1,288 @@
+.header {
+    background-image: url("/images/main/header.svg");
+    width: 100%;
+    height: 70.2rem;
+    text-align: center;
+    padding-top: 18rem;
+    color: $white-color;
+    position: relative;
+
+
+    h1 {
+        font-size: 4rem;
+        font-family: 'Vazir-Bold';
+        margin-bottom: 3rem;
+    }
+
+    p {
+        font-size: 2.4rem;
+        font-family: 'Vazir-Light';
+        margin-bottom: 6rem;
+    }
+
+    &__search {
+        position: relative;
+        width: 60rem;
+        margin: 0 auto;
+
+        &--inputs {
+            width: 60rem;
+            background: #FFFFFF;
+            box-shadow: 0 8px 14px rgba(0, 0, 0, 0.25);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            padding-left: 6rem;
+            font-size: 2.4rem;
+            font-family: 'Vazir-Light';
+            color: $dark-color;
+
+            &::placeholder {
+                color: $gray-color;
+            }
+        }
+
+        &--btn-search {
+            width: 5rem;
+            height: 5rem;
+            position: absolute;
+            left: .8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: $primary-color;
+            border-radius: 1rem;
+
+            i {
+                font-size: 4.7rem;
+                color: $white-color;
+            }
+        }
+    }
+}
+
+.story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    position: relative;
+    top: -20rem;
+
+    &__lawyer {
+        position: relative;
+        left: 8.5rem;
+        top: -4rem;
+    }
+
+    &__user {
+        width: 50rem;
+        height: 40rem;
+        position: relative;
+        right: 11rem;
+    }
+}
+
+.services {
+    margin-top: -18rem;
+    color: $dark-color;
+
+    h2 {
+        font-family: 'Vazir-Bold';
+        font-size: 3rem;
+        margin-bottom: 5rem;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 5rem;
+    }
+}
+
+.lawyers {
+    margin-top: 12rem;
+    color: $dark-color;
+    margin-bottom: 8rem;
+
+    h2 {
+        font-family: 'Vazir-Bold';
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-family: 'Vazir-Light';
+        font-size: 1.8rem;
+        margin-bottom: 5rem;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+.features {
+    width: 100%;
+    padding: 7rem;
+    border-radius: 5rem;
+    color: $white-color;
+    background-image: linear-gradient(90deg, $primary-color 0%, #E100FF 100%);
+    box-shadow: 0 .4rem 1.5rem rgba(0, 0, 0, .3);
+    margin-bottom: 12rem;
+
+    h3 {
+        font-size: 2.4rem;
+        font-family: 'Vazir-Medium';
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        li {
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            width: 4rem;
+            height: 4rem;
+        }
+
+        span {
+            font-size: 1.6rem;
+            font-family: 'Vazir-Light';
+            margin-right: .5rem;
+        }
+    }
+}
+
+.registration {
+    width: 100%;
+
+    h3 {
+        font-size: 3.4rem;
+        font-family: 'Vazir-Medium';
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        grid-gap: 2rem;
+        margin-top: -4rem;
+
+    }
+
+    &__lawyer {
+        background-image: url("/images/main/bg-lawyer.svg");
+        width: 62rem;
+        height: 60rem;
+        position: relative;
+
+        &--image {
+            position: absolute;
+            right: -10rem;
+            top: -3rem;
+            z-index: 99;
+        }
+
+        &--text {
+            position: absolute;
+            right: 53%;
+            top: 53%;
+            transform: translate(50%, -50%);
+            width: 60%;
+            text-align: center;
+
+            h4 {
+                font-size: 2.4rem;
+                font-family: 'Vazir-Medium';
+                color: $primary-color;
+                margin-bottom: 3rem;
+            }
+
+            p {
+                font-size: 1.8rem;
+                font-family: 'Vazir-Light';
+                margin-bottom: 3rem;
+            }
+
+            a {
+                width: 50%;
+                display: block;
+                padding: 1rem 2rem;
+                background-color: $primary-color;
+                border-radius: 5rem;
+                color: $white-color;
+                margin: 0 auto;
+                font-size: 1.8rem;
+                font-family: 'Vazir-Light';
+                transition: all .3s ease;
+
+                &:hover {
+                    box-shadow: 0 0 1.5rem $primary-color-rgba;
+                }
+            }
+        }
+    }
+
+    &__user {
+        justify-self: left;
+
+        background-image: url("/images/main/bg-user.svg");
+        width: 62rem;
+        height: 60rem;
+        position: relative;
+
+        &--image {
+            position: absolute;
+            left: -4rem;
+            z-index: 99;
+        }
+
+        &--text {
+            position: absolute;
+            left: -2rem;
+            top: 53%;
+            transform: translate(50%, -50%);
+            width: 60%;
+            text-align: center;
+
+            h4 {
+                font-size: 2.4rem;
+                font-family: 'Vazir-Medium';
+                color: $primary-color;
+                margin-bottom: 3rem;
+            }
+
+            p {
+                font-size: 1.8rem;
+                font-family: 'Vazir-Light';
+                margin-bottom: 3rem;
+            }
+
+            a {
+                width: 50%;
+                display: block;
+                padding: 1rem 2rem;
+                background-color: $primary-color;
+                border-radius: 5rem;
+                color: $white-color;
+                margin: 0 auto;
+                font-size: 1.8rem;
+                font-family: 'Vazir-Light';
+                transition: all .3s ease;
+
+                &:hover {
+                    box-shadow: 0 0 1.5rem $primary-color-rgba;
+                }
+            }
+        }
+    }
+}

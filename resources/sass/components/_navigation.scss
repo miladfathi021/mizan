@@ -1,7 +1,7 @@
 .navigation {
     width: 100%;
     //height: 10rem;
-    background-color: #4c51bf;
+    //background-image: linear-gradient(to right, $primary-color, #755FFF);
     position: fixed;
     left: 0;
     top: 0;
@@ -11,7 +11,7 @@
         display: grid;
         grid-template-columns: 1fr 3fr;
         padding: 1.8rem 0;
-        transition: all .5s;
+        transition: all .2s;
     }
 
     &__items {
@@ -29,12 +29,13 @@
         &:last-child {
             grid-column: -1 / -2;
             justify-self: left;
-            padding: .5rem 1.5rem;
+            padding: .7rem 2rem;
             background-color: $white-color;
             color: $primary-color;
             border-radius: .8rem;
             cursor: pointer;
-            font-family: 'Vazir-Thin';
+            font-family: 'Vazir-Light';
+            transition: all .2s;
         }
 
         a {
@@ -53,13 +54,23 @@
 
     &__logo {
         height: 10rem;
+        transition: all .2s ease;
     }
 }
 
 .navigation--scroll {
-    background-color: $primary-color;
+    background-image: linear-gradient(38.75deg, #713DFF 53.05%, rgba(117, 95, 255, 1) 82.45%);
+    //box-shadow: 0 .2rem .6rem rgba(0,0,0, .3);
 
     .navigation__content {
         padding: .4rem 0 !important;
+    }
+
+    .navigation__logo {
+        height: 8rem;
+    }
+
+    .navigation__item:last-child {
+        padding: .5rem 2rem;
     }
 }

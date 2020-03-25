@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
@@ -13953,7 +13955,7 @@ video {
 }
 
 @font-face {
-  font-family: "Vazir-Block";
+  font-family: "Vazir-Black";
 
   src: url("/fonts/Vazir-Black.eot"), url("/fonts/Vazir-Black.ttf"), url("/fonts/Vazir-Black.woff"), url("/fonts/Vazir-Black.woff2");
 }
@@ -13982,6 +13984,42 @@ video {
   src: url("/fonts/Vazir-Thin.eot"), url("/fonts/Vazir-Thin.ttf"), url("/fonts/Vazir-Thin.woff"), url("/fonts/Vazir-Thin.woff2");
 }
 
+@font-face {
+  font-family: "Vazir";
+
+  src: url("/fonts/farsi-number/Vazir-FD.eot"), url("/fonts/farsi-number/Vazir-FD.ttf"), url("/fonts/farsi-number/Vazir-FD.woff"), url("/fonts/farsi-number/Vazir-FD.woff2");
+}
+
+@font-face {
+  font-family: "Vazir-Black-Fd\200C";
+
+  src: url("/fonts/Vazir-Black-FD.eot"), url("/fonts/farsi-number/Vazir-Black-FD.ttf"), url("/fonts/farsi-number/Vazir-Black-FD.woff"), url("/fonts/farsi-number/Vazir-Black-FD.woff2");
+}
+
+@font-face {
+  font-family: "Vazir-Bold-Fd";
+
+  src: url("/fonts/farsi-number/Vazir-Bold-FD.eot"), url("/fonts/farsi-number/Vazir-Bold-FD.ttf"), url("/fonts/farsi-number/Vazir-Bold-FD.woff"), url("/fonts/farsi-number/Vazir-Bold-FD.woff2");
+}
+
+@font-face {
+  font-family: "Vazir-Light-Fd";
+
+  src: url("/fonts/farsi-number/Vazir-Light-FD.eot"), url("/fonts/farsi-number/Vazir-Light-FD.ttf"), url("/fonts/farsi-number/Vazir-Light-FD.woff"), url("/fonts/farsi-number/Vazir-Light-FD.woff2");
+}
+
+@font-face {
+  font-family: "Vazir-Medium-Fd";
+
+  src: url("/fonts/farsi-number/Vazir-Medium-FD.eot"), url("/fonts/farsi-number/Vazir-Medium-FD.ttf"), url("/fonts/farsi-number/Vazir-Medium-FD.woff"), url("/fonts/farsi-number/Vazir-Medium-FD.woff2");
+}
+
+@font-face {
+  font-family: "Vazir-Thin-Fd";
+
+  src: url("/fonts/farsi-number/Vazir-Thin-FD.eot"), url("/fonts/farsi-number/Vazir-Thin-FD.ttf"), url("/fonts/farsi-number/Vazir-Thin-FD.woff"), url("/fonts/farsi-number/Vazir-Thin-FD.woff2");
+}
+
 *,
 *:before,
 *:after {
@@ -14004,11 +14042,18 @@ html {
   width: 100%;
 }
 
+input {
+  border: none;
+  outline: none;
+}
+
 body {
   direction: rtl;
   line-height: 1.6;
   font-family: "Vazir-Light", sans-serif;
-  height: 90rem;
+  background-color: #f5f4f9;
+  color: #161616;
+  height: 340rem;
 }
 
 .container {
@@ -14020,7 +14065,6 @@ body {
 
 .navigation {
   width: 100%;
-  background-color: #4c51bf;
   position: fixed;
   left: 0;
   top: 0;
@@ -14031,7 +14075,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 3fr;
   padding: 1.8rem 0;
-  transition: all 0.5s;
+  transition: all 0.2s;
 }
 
 .navigation__items {
@@ -14050,12 +14094,13 @@ body {
 .navigation__item:last-child {
   grid-column: -1/-2;
   justify-self: left;
-  padding: 0.5rem 1.5rem;
+  padding: 0.7rem 2rem;
   background-color: #ffffff;
   color: #713DFF;
   border-radius: 0.8rem;
   cursor: pointer;
-  font-family: "Vazir-Thin";
+  font-family: "Vazir-Light";
+  transition: all 0.2s;
 }
 
 .navigation__item a {
@@ -14073,14 +14118,434 @@ body {
 
 .navigation__logo {
   height: 10rem;
+  transition: all 0.2s ease;
 }
 
 .navigation--scroll {
-  background-color: #713DFF;
+  background-image: linear-gradient(38.75deg, #713DFF 53.05%, #755fff 82.45%);
 }
 
 .navigation--scroll .navigation__content {
   padding: 0.4rem 0 !important;
+}
+
+.navigation--scroll .navigation__logo {
+  height: 8rem;
+}
+
+.navigation--scroll .navigation__item:last-child {
+  padding: 0.5rem 2rem;
+}
+
+.card {
+  width: 100%;
+  background-color: #ffffff;
+  border-top-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+  box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.25);
+  padding: 1rem 2rem;
+  position: relative;
+  transition: all 0.25s ease;
+  cursor: pointer;
+  top: 0;
+}
+
+.card:hover {
+  top: -0.7rem;
+}
+
+.card__service {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.card__service--image {
+  width: 8rem;
+  height: 8rem;
+  background-color: rgba(113, 61, 255, 0.8);
+  padding: 1rem;
+  border-radius: 100%;
+  margin: 0 auto;
+  margin-bottom: 3.7rem;
+}
+
+.card__service h3 {
+  font-size: 2.4rem;
+  font-family: "Vazir-Medium";
+  margin-bottom: 1.4rem;
+}
+
+.card__service p {
+  font-size: 1.7rem;
+  font-family: "Vazir-Light";
+}
+
+.card__lawyers {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.card__lawyers--image {
+  width: 9rem;
+  height: 9rem;
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 100%;
+  margin: 0 auto;
+  margin-bottom: 3.7rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.25);
+  border: 2px solid #ffffff;
+}
+
+.card__lawyers--image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card__lawyers h3 {
+  font-size: 1.9rem;
+  font-family: "Vazir-Medium";
+  margin-bottom: 3rem;
+}
+
+.card__lawyers--score {
+  height: 3rem;
+  background: #fdb916;
+  box-shadow: 0 0 1rem rgba(253, 228, 5, 0.7);
+  display: inline-block;
+  border-radius: 0.6rem;
+  text-align: center;
+  padding: 0.2rem 0.5rem;
+  font-size: 1.5rem;
+  font-family: "Vazir-Bold-Fd";
+  color: #ffffff;
+  margin-bottom: 3rem;
+}
+
+.card__lawyers--score span {
+  line-height: 3rem;
+}
+
+.card__lawyers--score i {
+  font-size: 1.8rem;
+}
+
+.card__lawyers--consultation a {
+  display: block;
+  padding: 1rem;
+  background-color: #ED1846;
+  border-radius: 50rem;
+  color: #ffffff;
+  font-family: "Vazir-Medium";
+  font-size: 1.5rem;
+}
+
+.header {
+  background-image: url("/images/main/header.svg");
+  width: 100%;
+  height: 70.2rem;
+  text-align: center;
+  padding-top: 18rem;
+  color: #ffffff;
+  position: relative;
+}
+
+.header h1 {
+  font-size: 4rem;
+  font-family: "Vazir-Bold";
+  margin-bottom: 3rem;
+}
+
+.header p {
+  font-size: 2.4rem;
+  font-family: "Vazir-Light";
+  margin-bottom: 6rem;
+}
+
+.header__search {
+  position: relative;
+  width: 60rem;
+  margin: 0 auto;
+}
+
+.header__search--inputs {
+  width: 60rem;
+  background: #FFFFFF;
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.25);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  padding-left: 6rem;
+  font-size: 2.4rem;
+  font-family: "Vazir-Light";
+  color: #161616;
+}
+
+.header__search--inputs::-webkit-input-placeholder {
+  color: #C0C0C0;
+}
+
+.header__search--inputs::-moz-placeholder {
+  color: #C0C0C0;
+}
+
+.header__search--inputs:-ms-input-placeholder {
+  color: #C0C0C0;
+}
+
+.header__search--inputs::-ms-input-placeholder {
+  color: #C0C0C0;
+}
+
+.header__search--inputs::placeholder {
+  color: #C0C0C0;
+}
+
+.header__search--btn-search {
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  left: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #713DFF;
+  border-radius: 1rem;
+}
+
+.header__search--btn-search i {
+  font-size: 4.7rem;
+  color: #ffffff;
+}
+
+.story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  position: relative;
+  top: -20rem;
+}
+
+.story__lawyer {
+  position: relative;
+  left: 8.5rem;
+  top: -4rem;
+}
+
+.story__user {
+  width: 50rem;
+  height: 40rem;
+  position: relative;
+  right: 11rem;
+}
+
+.services {
+  margin-top: -18rem;
+  color: #161616;
+}
+
+.services h2 {
+  font-family: "Vazir-Bold";
+  font-size: 3rem;
+  margin-bottom: 5rem;
+}
+
+.services__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5rem;
+}
+
+.lawyers {
+  margin-top: 12rem;
+  color: #161616;
+  margin-bottom: 8rem;
+}
+
+.lawyers h2 {
+  font-family: "Vazir-Bold";
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.lawyers p {
+  font-family: "Vazir-Light";
+  font-size: 1.8rem;
+  margin-bottom: 5rem;
+}
+
+.lawyers__wrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 2rem;
+}
+
+.features {
+  width: 100%;
+  padding: 7rem;
+  border-radius: 5rem;
+  color: #ffffff;
+  background-image: linear-gradient(90deg, #713DFF 0%, #E100FF 100%);
+  box-shadow: 0 0.4rem 1.5rem rgba(0, 0, 0, 0.3);
+  margin-bottom: 12rem;
+}
+
+.features h3 {
+  font-size: 2.4rem;
+  font-family: "Vazir-Medium";
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.features ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.features ul li {
+  display: flex;
+  align-items: center;
+}
+
+.features ul img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.features ul span {
+  font-size: 1.6rem;
+  font-family: "Vazir-Light";
+  margin-right: 0.5rem;
+}
+
+.registration {
+  width: 100%;
+}
+
+.registration h3 {
+  font-size: 3.4rem;
+  font-family: "Vazir-Medium";
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.registration__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-gap: 2rem;
+  margin-top: -4rem;
+}
+
+.registration__lawyer {
+  background-image: url("/images/main/bg-lawyer.svg");
+  width: 62rem;
+  height: 60rem;
+  position: relative;
+}
+
+.registration__lawyer--image {
+  position: absolute;
+  right: -10rem;
+  top: -3rem;
+  z-index: 99;
+}
+
+.registration__lawyer--text {
+  position: absolute;
+  right: 53%;
+  top: 53%;
+  transform: translate(50%, -50%);
+  width: 60%;
+  text-align: center;
+}
+
+.registration__lawyer--text h4 {
+  font-size: 2.4rem;
+  font-family: "Vazir-Medium";
+  color: #713DFF;
+  margin-bottom: 3rem;
+}
+
+.registration__lawyer--text p {
+  font-size: 1.8rem;
+  font-family: "Vazir-Light";
+  margin-bottom: 3rem;
+}
+
+.registration__lawyer--text a {
+  width: 50%;
+  display: block;
+  padding: 1rem 2rem;
+  background-color: #713DFF;
+  border-radius: 5rem;
+  color: #ffffff;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  font-family: "Vazir-Light";
+  transition: all 0.3s ease;
+}
+
+.registration__lawyer--text a:hover {
+  box-shadow: 0 0 1.5rem rgba(113, 61, 255, 0.8);
+}
+
+.registration__user {
+  justify-self: left;
+  background-image: url("/images/main/bg-user.svg");
+  width: 62rem;
+  height: 60rem;
+  position: relative;
+}
+
+.registration__user--image {
+  position: absolute;
+  left: -4rem;
+  z-index: 99;
+}
+
+.registration__user--text {
+  position: absolute;
+  left: -2rem;
+  top: 53%;
+  transform: translate(50%, -50%);
+  width: 60%;
+  text-align: center;
+}
+
+.registration__user--text h4 {
+  font-size: 2.4rem;
+  font-family: "Vazir-Medium";
+  color: #713DFF;
+  margin-bottom: 3rem;
+}
+
+.registration__user--text p {
+  font-size: 1.8rem;
+  font-family: "Vazir-Light";
+  margin-bottom: 3rem;
+}
+
+.registration__user--text a {
+  width: 50%;
+  display: block;
+  padding: 1rem 2rem;
+  background-color: #713DFF;
+  border-radius: 5rem;
+  color: #ffffff;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  font-family: "Vazir-Light";
+  transition: all 0.3s ease;
+}
+
+.registration__user--text a:hover {
+  box-shadow: 0 0 1.5rem rgba(113, 61, 255, 0.8);
 }
 
 @media (min-width: 640px){

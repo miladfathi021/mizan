@@ -1,0 +1,113 @@
+.card {
+    width: 100%;
+    background-color: $white-color;
+    border-top-left-radius: 3rem;
+    border-bottom-right-radius: 3rem;
+    box-shadow: 0 .4rem 1.5rem rgba(0, 0, 0, .25);
+    padding: 1rem 2rem;
+    position: relative;
+    transition: all .25s ease;
+    cursor: pointer;
+    top: 0;
+
+    &:hover {
+        top: -.7rem;
+    }
+
+    &__service {
+        text-align: center;
+        padding: 2rem 1rem;
+
+        &--image {
+            width: 8rem;
+            height: 8rem;
+            background-color: $primary-color-rgba;
+            padding: 1rem;
+            border-radius: 100%;
+            margin: 0 auto;
+            margin-bottom: 3.7rem;
+        }
+
+        h3 {
+            font-size: 2.4rem;
+            font-family: 'Vazir-Medium';
+            margin-bottom: 1.4rem;
+        }
+
+        p {
+            font-size: 1.7rem;
+            font-family: 'Vazir-Light';
+        }
+    }
+
+    &__lawyers {
+        text-align: center;
+        padding: 2rem 1rem;
+
+        &--image {
+            width: 9rem;
+            height: 9rem;
+            background-color: $white-color;
+            padding: 1rem;
+            border-radius: 100%;
+            margin: 0 auto;
+            margin-bottom: 3.7rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 .6rem 1rem rgba(0, 0, 0, 0.25);
+            border: 2px solid $white-color;
+
+            img {
+                object-fit: cover;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        h3 {
+            font-size: 1.9rem;
+            font-family: 'Vazir-Medium';
+            margin-bottom: 3rem;
+        }
+
+        &--score {
+            height: 3rem;
+            background: $yellow-color;
+            box-shadow: 0 0 1rem rgba(253, 228, 5, 0.7);
+            display: inline-block;
+            border-radius: .6rem;
+            text-align: center;
+            padding: .2rem .5rem;
+            font-size: 1.5rem;
+            font-family: 'Vazir-Bold-Fd';
+            color: $white-color;
+            margin-bottom: 3rem;
+
+            span {
+                line-height: 3rem;
+            }
+
+            i {
+                font-size: 1.8rem;
+            }
+        }
+
+        &--consultation {
+            a {
+                display: block;
+                padding: 1rem;
+                background-color: #ED1846;
+                border-radius: 50rem;
+                color: $white-color;
+                font-family: 'Vazir-Medium';
+                font-size: 1.5rem;
+
+                &:hover {
+
+                }
+            }
+        }
+    }
+}

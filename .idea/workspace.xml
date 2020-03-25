@@ -3,20 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="5230ede0-cb53-41ab-80e8-27fa5808bb1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Navigation.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Navigation.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/bases/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/bases/_global.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/bases/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/bases/_typography.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/bases/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/bases/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/components/_navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/_navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/homepage/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/homepage/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +231,8 @@
       <workItem from="1583819185312" duration="1502000" />
       <workItem from="1583858356161" duration="7219000" />
       <workItem from="1583907339192" duration="416000" />
-      <workItem from="1584860240061" duration="18381000" />
+      <workItem from="1584860240061" duration="19934000" />
+      <workItem from="1584944536799" duration="26503000" />
     </task>
     <servers />
   </component>
@@ -270,30 +268,35 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1583784189977" />
-    <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1584865903669">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1584909134704">
+      <screen x="0" y="23" width="1440" height="802" />
     </state>
     <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584865903669" />
-    <state width="1440" height="255" key="GridCell.Tab.0.center" timestamp="1584865903664">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.23.1440.802@0.23.1440.802" timestamp="1584909134704" />
+    <state width="1440" height="255" key="GridCell.Tab.0.center" timestamp="1584909134703">
+      <screen x="0" y="23" width="1440" height="802" />
     </state>
     <state width="1440" height="255" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584865903664" />
-    <state width="1440" height="255" key="GridCell.Tab.0.left" timestamp="1584865903663">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1440" height="255" key="GridCell.Tab.0.center/0.23.1440.802@0.23.1440.802" timestamp="1584909134703" />
+    <state width="1440" height="255" key="GridCell.Tab.0.left" timestamp="1584909134701">
+      <screen x="0" y="23" width="1440" height="802" />
     </state>
     <state width="1440" height="255" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584865903663" />
-    <state width="1440" height="255" key="GridCell.Tab.0.right" timestamp="1584865903666">
-      <screen x="0" y="0" width="1440" height="900" />
+    <state width="1440" height="255" key="GridCell.Tab.0.left/0.23.1440.802@0.23.1440.802" timestamp="1584909134701" />
+    <state width="1440" height="255" key="GridCell.Tab.0.right" timestamp="1584909134703">
+      <screen x="0" y="23" width="1440" height="802" />
     </state>
     <state width="1440" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584865903666" />
+    <state width="1440" height="255" key="GridCell.Tab.0.right/0.23.1440.802@0.23.1440.802" timestamp="1584909134703" />
     <state x="497" y="257" key="NewPhpClassDialog" timestamp="1583570261891">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="497" y="257" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1583570261891" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1584903351486">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1585129443325">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1584903351486" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1585129443325" />
+    <state width="500" height="445" key="SwitcherDM/0.23.1440.802@0.23.1440.802" timestamp="1585115873503" />
     <state x="482" y="71" key="refactoring.ChangeSignatureDialog" timestamp="1583566748473">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

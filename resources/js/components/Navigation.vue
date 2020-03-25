@@ -1,11 +1,11 @@
 <template>
-    <div class="navigation" :class="{'navigation--scroll': changeScrollPosition > 150}">
+    <div class="navigation" :class="{'navigation--scroll': changeScrollPosition > 80}">
         <div class="container">
             <div class="navigation__content">
                 <div class="navigation__logo">
-                    <a href="/">
+                    <router-link to="/">
                         <img class="navigation__logo" src="/images/main/logo.svg" alt="میزان">
-                    </a>
+                    </router-link>
                 </div>
                 <ul class="navigation__items">
                     <li class="navigation__item"><a href="/">مشاوره متنی</a></li>

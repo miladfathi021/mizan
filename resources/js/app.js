@@ -11,6 +11,21 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 
+
+
+
+import HomePage from "./pages/HomePage";
+
+const routes = [
+    { path: '/', component: HomePage },
+];
+
+
+const router = new VueRouter({
+    mode: 'history',
+    routes
+});
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -32,4 +47,5 @@ Vue.component('navigation', require('./components/Navigation.vue').default);
 
 const app = new Vue({
     el: '#app',
+    router
 });

@@ -20,9 +20,16 @@ html {
     width: 100%;
 }
 
+input {
+    border: none;
+    outline: none;
+}
+
 body {
     direction: rtl;
     line-height: $line-height-base;
     font-family: $font-family-sans-serif;
-    height: 90rem;
+    background-color: $body-background;
+    color: $dark-color;
+    height: 340rem;
 }
