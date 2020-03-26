@@ -11,7 +11,7 @@
                     <li class="navigation__item"><a href="/">مشاوره متنی</a></li>
                     <li class="navigation__item"><a href="/">مشاوره تلفنی</a></li>
                     <li class="navigation__item"><a href="/">بلاگ</a></li>
-                    <li class="navigation__item" v-if="user == null"><a @click.prevent="showLoginPage">ورود / ثبت نام</a></li>
+                    <li class="navigation__item" v-if="user == null"><a @click.prevent="showRegisterLoginComponents">ورود / ثبت نام</a></li>
                     <li class="navigation__item" v-else><a @click.prevent="">میلاد</a></li>
                 </ul>
             </div>
@@ -32,8 +32,8 @@
             changeNavigation () {
                 this.changeScrollPosition = window.scrollY;
             },
-            showLoginPage () {
-                this.showLoginAndRegisterPage = true;
+            showRegisterLoginComponents () {
+                this.$store.dispatch('showRegisterLogin/show');
             }
         },
         mounted () {

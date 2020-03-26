@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="home-page">
         <header>
             <div class="header">
                 <h1>"میزان" پشتیبان مشکلات حقوقی شما</h1>
@@ -206,27 +206,38 @@
                 </section>
             </div>
         </main>
-        <register-login v-if="showRegisterLogin"></register-login>
+        <register-login v-if="showRegisterLogin" v-outside-click="{ method: 'closeEvent' }"></register-login>
     </div>
 </template>
 
 <script>
     import RegisterLogin from "../components/RegisterLogin";
+    import { mapState } from "vuex";
 
     export default {
         name: "HomePage",
         components: {RegisterLogin},
         data () {
             return {
-                showRegisterLogin: false,
+
             }
+        },
+
+        computed: {
+            ...mapState({
+                showRegisterLogin: state => state.showRegisterLogin.show
+            }),
         },
 
         methods: {
             showRegisterLoginComponents () {
-                this.showRegisterLogin = true;
+                this.$store.dispatch('showRegisterLogin/show');
+            },
+            closeEvent () {
+                console.log('close event called');
+                this.$store.dispatch('showRegisterLogin/hide');
             }
-        }
+        },
     }
 </script>
 

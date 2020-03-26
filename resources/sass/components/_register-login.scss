@@ -1,0 +1,91 @@
+.register-login {
+    position: fixed;
+    left: 0; top: 0; right: 0; bottom: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .83);
+    z-index: 9999;
+
+    &__wrapper {
+        width: 70%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0 auto;
+        background-color: $white-color;
+        border-radius: 5rem;
+        padding: 5rem;
+    }
+
+    &__close {
+        position: absolute;
+        right: 3rem;
+        top: 3rem;
+        cursor: pointer;
+
+        i {
+            color: $red-color;
+            font-size: 4rem;
+        }
+    }
+
+    &__logo {
+        width: 13rem;
+        height: 13rem;
+        border-radius: 100%;
+        background-color: $primary-color;
+        object-fit: cover;
+        margin: 0 auto;
+        position: relative;
+        margin-bottom: 5rem;
+
+        img {
+            width: 9rem;
+            height: 7.1rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-47%, -50%);
+        }
+    }
+
+    h4 {
+        font-size: 2rem;
+        font-family: 'Vazir-Medium';
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    &__card {
+        width: 70%;
+        margin: 0 auto;
+        padding: 10rem;
+        background-color: $light-blue;
+        border-radius: 3rem;
+        border: .2rem solid #E0EAFC;
+    }
+
+    label {
+        font-size: 1.6rem;
+        font-family: 'Vazir-Light';
+    }
+
+    input {
+        text-align: left;
+        font-size: 1.8rem;
+        font-family: 'Vazir-Medium';
+        border: .1rem solid $light-gray-color;
+        margin-bottom: 1rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 1.2rem 2rem;
+        text-align: center;
+        color: $white-color;
+        background-color: $red-color;
+        font-size: 2rem;
+        font-family: 'Vazir-Medium';
+        border-radius: .7rem;
+    }
+}

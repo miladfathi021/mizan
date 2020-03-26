@@ -1,3 +1,6 @@
+.home-page {
+    position: relative;
+}
 .header {
     background-image: url("/images/main/header.svg");
     width: 100%;
@@ -248,7 +251,7 @@
 
         &--text {
             position: absolute;
-            left: -2rem;
+            left: 2rem;
             top: 53%;
             transform: translate(50%, -50%);
             width: 60%;
@@ -274,8 +277,8 @@
                 background-color: $primary-color;
                 border-radius: 5rem;
                 color: $white-color;
-                margin: 0 auto;
                 font-size: 1.8rem;
+                margin: 0 auto;
                 font-family: 'Vazir-Light';
                 transition: all .3s ease;
 

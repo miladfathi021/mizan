@@ -29,13 +29,17 @@
         &:last-child {
             grid-column: -1 / -2;
             justify-self: left;
-            padding: .7rem 2rem;
             background-color: $white-color;
             color: $primary-color;
             border-radius: .8rem;
             cursor: pointer;
             font-family: 'Vazir-Light';
             transition: all .2s;
+
+            a {
+                display: block;
+                padding: .7rem 2rem;
+            }
         }
 
         a {
@@ -70,7 +74,7 @@
         height: 8rem;
     }
 
-    .navigation__item:last-child {
+    .navigation__item:last-child a {
         padding: .5rem 2rem;
     }
 }

@@ -14053,7 +14053,6 @@ body {
   font-family: "Vazir-Light", sans-serif;
   background-color: #f5f4f9;
   color: #161616;
-  height: 340rem;
 }
 
 .container {
@@ -14094,13 +14093,17 @@ body {
 .navigation__item:last-child {
   grid-column: -1/-2;
   justify-self: left;
-  padding: 0.7rem 2rem;
   background-color: #ffffff;
   color: #713DFF;
   border-radius: 0.8rem;
   cursor: pointer;
   font-family: "Vazir-Light";
   transition: all 0.2s;
+}
+
+.navigation__item:last-child a {
+  display: block;
+  padding: 0.7rem 2rem;
 }
 
 .navigation__item a {
@@ -14133,8 +14136,23 @@ body {
   height: 8rem;
 }
 
-.navigation--scroll .navigation__item:last-child {
+.navigation--scroll .navigation__item:last-child a {
   padding: 0.5rem 2rem;
+}
+
+.form-group:not(:last-child) {
+  margin-bottom: 0.2rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.7rem;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
 }
 
 .card {
@@ -14244,6 +14262,106 @@ body {
   color: #ffffff;
   font-family: "Vazir-Medium";
   font-size: 1.5rem;
+}
+
+.register-login {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.83);
+  z-index: 9999;
+}
+
+.register-login__wrapper {
+  width: 70%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 5rem;
+  padding: 5rem;
+}
+
+.register-login__close {
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  cursor: pointer;
+}
+
+.register-login__close i {
+  color: #ED1846;
+  font-size: 4rem;
+}
+
+.register-login__logo {
+  width: 13rem;
+  height: 13rem;
+  border-radius: 100%;
+  background-color: #713DFF;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.register-login__logo img {
+  width: 9rem;
+  height: 7.1rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-47%, -50%);
+}
+
+.register-login h4 {
+  font-size: 2rem;
+  font-family: "Vazir-Medium";
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.register-login__card {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10rem;
+  background-color: #FBFAFF;
+  border-radius: 3rem;
+  border: 0.2rem solid #E0EAFC;
+}
+
+.register-login label {
+  font-size: 1.6rem;
+  font-family: "Vazir-Light";
+}
+
+.register-login input {
+  text-align: left;
+  font-size: 1.8rem;
+  font-family: "Vazir-Medium";
+  border: 0.1rem solid #DCDCDC;
+  margin-bottom: 1rem;
+}
+
+.register-login button {
+  width: 100%;
+  padding: 1.2rem 2rem;
+  text-align: center;
+  color: #ffffff;
+  background-color: #ED1846;
+  font-size: 2rem;
+  font-family: "Vazir-Medium";
+  border-radius: 0.7rem;
+}
+
+.home-page {
+  position: relative;
 }
 
 .header {
@@ -14511,7 +14629,7 @@ body {
 
 .registration__user--text {
   position: absolute;
-  left: -2rem;
+  left: 2rem;
   top: 53%;
   transform: translate(50%, -50%);
   width: 60%;
@@ -14538,8 +14656,8 @@ body {
   background-color: #713DFF;
   border-radius: 5rem;
   color: #ffffff;
-  margin: 0 auto;
   font-size: 1.8rem;
+  margin: 0 auto;
   font-family: "Vazir-Light";
   transition: all 0.3s ease;
 }

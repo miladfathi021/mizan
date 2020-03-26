@@ -7,24 +7,10 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
-import VueRouter from "vue-router";
-
-Vue.use(VueRouter);
 
 
-
-
-import HomePage from "./pages/HomePage";
-
-const routes = [
-    { path: '/', component: HomePage },
-];
-
-
-const router = new VueRouter({
-    mode: 'history',
-    routes
-});
+import router from './router/router';
+import store from './store/store';
 
 /**
  * The following block of code may be used to automatically register your
@@ -45,7 +31,22 @@ Vue.component('navigation', require('./components/Navigation.vue').default);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+
+Vue.directive('outside-click', {
+    bind: function (el, binding, vnode) {
+        document.body.addEventListener('click', function (event) {
+            console.log(event, el);
+            if (
+                event.target === el
+            ) {
+                vnode.context[binding.value.method](event);
+            }
+        });
+    }
+});
+
 const app = new Vue({
     el: '#app',
-    router
+    router,
+    store,
 });
