@@ -12,7 +12,7 @@
                     <li class="navigation__item"><a href="/">مشاوره تلفنی</a></li>
                     <li class="navigation__item"><a href="/">بلاگ</a></li>
                     <li class="navigation__item" v-if="user == null"><a @click.prevent="showRegisterLoginComponents">ورود / ثبت نام</a></li>
-                    <li class="navigation__item" v-else><a @click.prevent="">میلاد</a></li>
+                    <li class="navigation__item" v-else><a @click.prevent=""><i class="las la-user" style="margin-left:.5rem;"></i>{{ user.name}}<i class="las la-angle-down" style="margin-right:1rem;"></i></a></li>
                 </ul>
             </div>
         </div>
@@ -20,12 +20,13 @@
 </template>
 
 <script>
+    import { mapGetters } from 'vuex';
+
     export default {
         data () {
             return {
                 changeScrollPosition: null,
                 showLoginAndRegisterPage: false,
-                user: null
             }
         },
         methods: {
@@ -35,6 +36,9 @@
             showRegisterLoginComponents () {
                 this.$store.dispatch('showRegisterLogin/show');
             }
+        },
+        computed: {
+          ...mapGetters('user', {user: 'user'}),
         },
         mounted () {
             window.addEventListener('scroll', this.changeNavigation);

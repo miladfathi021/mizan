@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\v1\users;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\v1\User as UserResource;
 use App\PhoneVerification;
 use App\User;
 use Illuminate\Http\Request;
@@ -33,9 +34,15 @@ class RegisterController extends Controller
             'password' => Hash::make(request()->password)
         ]);
 
+        $user = User::where('phone', $user->phone)->first();
+
+        $user->tokens()->delete();
+
+        $token = $user->createToken('Api Token')->accessToken;
+
         return response()->json([
             'status' => 201,
-            'user' => $user
+            'user' => new UserResource($user, $token),
         ], 201);
     }
 }

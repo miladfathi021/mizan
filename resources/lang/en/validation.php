@@ -147,7 +147,7 @@ return [
         'email'                 => 'ایمیل',
         'first_name'            => 'نام',
         'last_name'             => 'نام خانوادگی',
-        'password'              => 'رمز عبور',
+        'password'              => 'کلمه عبور',
         'password_confirmation' => 'تکرار رمز عبور',
         'city'                  => 'شهر',
         'country'               => 'کشور',
@@ -174,5 +174,6 @@ return [
         'size'                  => 'اندازه',
         'terms'                 => 'شرایط',
         'province'              => 'استان',
+        'code'                  => 'کد'
     ],
 ];

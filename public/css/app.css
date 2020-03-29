@@ -14149,10 +14149,59 @@ body {
   margin-bottom: 0.7rem;
 }
 
+.form-group label span.description {
+  font-size: 1.4rem;
+}
+
 .form-group input {
   width: 100%;
   padding: 1rem 2rem;
   border-radius: 1rem;
+}
+
+.form-group input:disabled {
+  background-color: #efefef;
+  color: #C0C0C0;
+}
+
+.form-group input[type=password], .form-group input[type=tel], .form-group input[type=number] {
+  direction: ltr;
+}
+
+.form-group .verification-code {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 3rem;
+  direction: ltr;
+}
+
+.form-group button {
+  outline: none;
+}
+
+.form-group button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-group label.left {
+  width: 100%;
+  text-align: left;
+}
+
+.form-group .resend {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: #ffffff;
+  background-color: #713DFF;
+  font-size: 1.6rem;
+  font-family: "Vazir-Light";
+  border-radius: 0.7rem;
+}
+
+.form-group .resend:hover {
+  background-color: #200077;
 }
 
 .card {
@@ -14284,7 +14333,7 @@ body {
   margin: 0 auto;
   background-color: #ffffff;
   border-radius: 5rem;
-  padding: 5rem;
+  padding: 2rem 5rem;
 }
 
 .register-login__close {
@@ -14308,7 +14357,11 @@ body {
      object-fit: cover;
   margin: 0 auto;
   position: relative;
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .register-login__logo img {
@@ -14323,6 +14376,13 @@ body {
 .register-login h4 {
   font-size: 2rem;
   font-family: "Vazir-Medium";
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.register-login p {
+  font-family: "Vazir-Light";
+  font-size: 1.8rem;
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -14330,7 +14390,7 @@ body {
 .register-login__card {
   width: 70%;
   margin: 0 auto;
-  padding: 10rem;
+  padding: 5rem 10rem;
   background-color: #FBFAFF;
   border-radius: 3rem;
   border: 0.2rem solid #E0EAFC;
@@ -14342,11 +14402,22 @@ body {
 }
 
 .register-login input {
-  text-align: left;
   font-size: 1.8rem;
   font-family: "Vazir-Medium";
   border: 0.1rem solid #DCDCDC;
   margin-bottom: 1rem;
+}
+
+.register-login input[type=tel] {
+  text-align: left;
+}
+
+.register-login input[type=password] {
+  text-align: left;
+}
+
+.register-login input[type=number] {
+  text-align: left;
 }
 
 .register-login button {
@@ -14358,6 +14429,20 @@ body {
   font-size: 2rem;
   font-family: "Vazir-Medium";
   border-radius: 0.7rem;
+}
+
+.register-login button:hover {
+  background-color: #cb1846;
+}
+
+.feedback {
+  font-family: "Vazir-Light";
+  text-align: right !important;
+}
+
+.feedback--danger {
+  font-size: 1.4rem !important;
+  color: #ED1846 !important;
 }
 
 .home-page {

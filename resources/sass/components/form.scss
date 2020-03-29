@@ -7,11 +7,61 @@
     label {
         display: block;
         margin-bottom: .7rem;
+
+        span.description {
+            font-size: 1.4rem;
+        }
     }
 
     input {
         width: 100%;
         padding: 1rem 2rem;
         border-radius: 1rem;
+
+
+        &:disabled {
+            background-color: #efefef;
+            color: $gray-color;
+        }
+
+        &[type=password], &[type=tel], &[type=number] {
+            direction: ltr;
+        }
+    }
+
+    .verification-code {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 3rem;
+        direction: ltr;
+    }
+
+    button {
+        outline: none;
+
+        &:disabled {
+            opacity: .5;
+            cursor: not-allowed;
+        }
+    }
+
+    label.left {
+        width: 100%;
+        text-align: left;
+    }
+
+    .resend {
+        display: inline-block;
+        padding: .5rem 1rem;
+        text-align: center;
+        color: $white-color;
+        background-color: $primary-color;
+        font-size: 1.6rem;
+        font-family: 'Vazir-Light';
+        border-radius: .7rem;
+
+        &:hover {
+            background-color: $hover-link-color;
+        }
     }
 }

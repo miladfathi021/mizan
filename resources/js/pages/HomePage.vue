@@ -211,7 +211,7 @@
 </template>
 
 <script>
-    import RegisterLogin from "../components/RegisterLogin";
+    import RegisterLogin from "../components/register-login/RegisterLogin";
     import { mapState } from "vuex";
 
     export default {
@@ -234,7 +234,6 @@
                 this.$store.dispatch('showRegisterLogin/show');
             },
             closeEvent () {
-                console.log('close event called');
                 this.$store.dispatch('showRegisterLogin/hide');
             }
         },

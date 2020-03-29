@@ -1,0 +1,9 @@
+.feedback {
+    font-family: 'Vazir-Light';
+    text-align: right !important;
+
+    &--danger {
+        font-size: 1.4rem !important;
+        color: $red-color !important;
+    }
+}

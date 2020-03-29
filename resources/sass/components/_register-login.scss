@@ -14,7 +14,7 @@
         margin: 0 auto;
         background-color: $white-color;
         border-radius: 5rem;
-        padding: 5rem;
+        padding: 2rem 5rem;
     }
 
     &__close {
@@ -37,7 +37,12 @@
         object-fit: cover;
         margin: 0 auto;
         position: relative;
-        margin-bottom: 5rem;
+        margin-bottom: 3rem;
+        position: absolute;
+        left: 0;
+        top:50%;
+
+        transform: translate(-50%, -50%);
 
         img {
             width: 9rem;
@@ -52,6 +57,13 @@
     h4 {
         font-size: 2rem;
         font-family: 'Vazir-Medium';
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    p {
+        font-family: 'Vazir-Light';
+        font-size: 1.8rem;
         margin-bottom: 3rem;
         text-align: center;
     }
@@ -59,7 +71,7 @@
     &__card {
         width: 70%;
         margin: 0 auto;
-        padding: 10rem;
+        padding: 5rem 10rem;
         background-color: $light-blue;
         border-radius: 3rem;
         border: .2rem solid #E0EAFC;
@@ -71,11 +83,25 @@
     }
 
     input {
-        text-align: left;
         font-size: 1.8rem;
         font-family: 'Vazir-Medium';
         border: .1rem solid $light-gray-color;
         margin-bottom: 1rem;
+
+        &[type=tel] {
+            text-align: left;
+
+        }
+
+        &[type=password] {
+            text-align: left;
+
+        }
+
+        &[type=number] {
+            text-align: left;
+
+        }
     }
 
     button {
@@ -87,5 +113,9 @@
         font-size: 2rem;
         font-family: 'Vazir-Medium';
         border-radius: .7rem;
+
+        &:hover {
+            background-color: $dark-red-color;
+        }
     }
 }

@@ -38,7 +38,7 @@ class PhoneVerificationTest extends TestCase
 
         $this->postJson('/api/v1/phone-verification', [
             'phone' => $code->phone,
-        ])->assertJson(['status' => 401, 'phone' => $code->phone]);
+        ])->assertJson(['status' => 200, 'phone' => $code->phone]);
     }
 
     /** @test **/

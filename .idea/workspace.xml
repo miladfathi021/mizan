@@ -2,21 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5230ede0-cb53-41ab-80e8-27fa5808bb1f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/js/components/register-login/RegisterLogin.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/PhoneVerificationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/PhoneVerificationsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/users/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/users/RegisterController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/Navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Navigation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/RegisterLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/RegisterLogin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/RegisterLogin.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/pages/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/HomePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/store.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/passwords.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/bases/_global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/bases/_global.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/bases/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/bases/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/components/_navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/_navigation.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/components/_register-login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/_register-login.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/sass/components/form.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/components/form.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sass/pages/_homepage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/pages/_homepage.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/master.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Vue Single File Component" />
         <option value="SCSS File" />
+        <option value="Vue Single File Component" />
       </list>
     </option>
   </component>
@@ -175,12 +180,13 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/js/components/register-login" />
       <recent name="$PROJECT_DIR$/resources/sass/bases" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Api/v1" />
       <recent name="$PROJECT_DIR$/app/Http/Controllers/Api/v1/users" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.HomePageTest.The_visitor_can_see_the_homepage">
+  <component name="RunManager" selected="PHPUnit.PhoneVerificationTest.The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed">
     <configuration name="HomePageTest.The_visitor_can_see_the_homepage" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\HomePageTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/HomePageTest.php" method="The_visitor_can_see_the_homepage" scope="Method" />
       <method v="2" />
@@ -189,12 +195,12 @@
       <TestRunner class="Tests\Feature\LawyerRegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="LawyerRegisterTest.national_no_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\LawyerRegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" method="national_no_is_required" scope="Method" />
-      <method v="2" />
-    </configuration>
     <configuration name="MainPageTest.The_visitor_can_see_the_homepage" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\MainPageTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/MainPageTest.php" method="The_visitor_can_see_the_homepage" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="PhoneVerificationTest.The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\PhoneVerificationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" method="The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -207,11 +213,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.PhoneVerificationTest.The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed" />
         <item itemvalue="PHPUnit.HomePageTest.The_visitor_can_see_the_homepage" />
         <item itemvalue="PHPUnit.MainPageTest.The_visitor_can_see_the_homepage" />
         <item itemvalue="PHPUnit.tests" />
         <item itemvalue="PHPUnit.LawyerRegisterTest" />
-        <item itemvalue="PHPUnit.LawyerRegisterTest.national_no_is_required" />
       </list>
     </recent_temporary>
   </component>
@@ -237,7 +243,10 @@
       <workItem from="1583907339192" duration="416000" />
       <workItem from="1584860240061" duration="19934000" />
       <workItem from="1584944536799" duration="26503000" />
-      <workItem from="1585205726973" duration="10192000" />
+      <workItem from="1585205726973" duration="20632000" />
+      <workItem from="1585288565535" duration="33616000" />
+      <workItem from="1585464833063" duration="97000" />
+      <workItem from="1585465023575" duration="226000" />
     </task>
     <servers />
   </component>
@@ -261,54 +270,54 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="408" y="185" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1583530099502" />
-    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1583784157275">
+    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585416428409">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1583784157275" />
+    <state x="234" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1585416428409" />
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584903505125">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1584903505125" />
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1583784189977">
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585378553953">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1583784189977" />
-    <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1584909134704">
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1585378553953" />
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1585254133563">
       <screen x="0" y="23" width="1440" height="802" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1584865903669" />
-    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.23.1440.802@0.23.1440.802" timestamp="1584909134704" />
-    <state width="1440" height="255" key="GridCell.Tab.0.center" timestamp="1584909134703">
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1585230871972" />
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.23.1440.802@0.23.1440.802" timestamp="1585254133563" />
+    <state width="1440" height="255" key="GridCell.Tab.0.center" timestamp="1585254133561">
       <screen x="0" y="23" width="1440" height="802" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1584865903664" />
-    <state width="1440" height="255" key="GridCell.Tab.0.center/0.23.1440.802@0.23.1440.802" timestamp="1584909134703" />
-    <state width="1440" height="255" key="GridCell.Tab.0.left" timestamp="1584909134701">
+    <state width="1440" height="255" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1585230871970" />
+    <state width="1440" height="255" key="GridCell.Tab.0.center/0.23.1440.802@0.23.1440.802" timestamp="1585254133561" />
+    <state width="1440" height="255" key="GridCell.Tab.0.left" timestamp="1585254133560">
       <screen x="0" y="23" width="1440" height="802" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1584865903663" />
-    <state width="1440" height="255" key="GridCell.Tab.0.left/0.23.1440.802@0.23.1440.802" timestamp="1584909134701" />
-    <state width="1440" height="255" key="GridCell.Tab.0.right" timestamp="1584909134703">
+    <state width="1440" height="255" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1585230871969" />
+    <state width="1440" height="255" key="GridCell.Tab.0.left/0.23.1440.802@0.23.1440.802" timestamp="1585254133560" />
+    <state width="1440" height="255" key="GridCell.Tab.0.right" timestamp="1585254133562">
       <screen x="0" y="23" width="1440" height="802" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1584865903666" />
-    <state width="1440" height="255" key="GridCell.Tab.0.right/0.23.1440.802@0.23.1440.802" timestamp="1584909134703" />
-    <state x="497" y="257" key="NewPhpClassDialog" timestamp="1583570261891">
+    <state width="1440" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1585230871971" />
+    <state width="1440" height="255" key="GridCell.Tab.0.right/0.23.1440.802@0.23.1440.802" timestamp="1585254133562" />
+    <state x="497" y="257" key="NewPhpClassDialog" timestamp="1585414366628">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="497" y="257" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1583570261891" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1585225631978">
+    <state x="497" y="257" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1585414366628" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1585426757535">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1585225631978" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1585426757535" />
     <state width="500" height="445" key="SwitcherDM/0.23.1440.802@0.23.1440.802" timestamp="1585115873503" />
     <state x="482" y="71" key="refactoring.ChangeSignatureDialog" timestamp="1583566748473">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="482" y="71" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1583566748473" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1584865080908">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1585416528199">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1584865080908" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1585416528199" />
   </component>
 </project>
