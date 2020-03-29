@@ -1,7 +1,5 @@
 require('./bootstrap');
-
 window.Vue = require('vue');
-
 
 import Cookie from "./helpers/cookies";
 import router from './router/router';
@@ -11,8 +9,8 @@ import './helpers/outside-click';
 // let cookie = new Cookie();
 // cookie.deleteCookie('user');
 
-
-Vue.component('navigation', require('./components/Navigation.vue').default);
+// Components
+Vue.component('navigation', require('./components/global/Navigation.vue').default);
 
 
 const app = new Vue({
@@ -32,7 +30,7 @@ const app = new Vue({
             };
 
             axios.post('/api/v1/api-token-check', {}, {headers : headers}).then(response => {
-                console.log(response.data);
+                console.log(response.data.message);
             }).catch(error => {
                 console.log(error.response.data.errors);
                 if(error.response.status === 401) {

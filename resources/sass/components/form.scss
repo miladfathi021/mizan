@@ -38,11 +38,13 @@
 
     button {
         outline: none;
+        cursor: pointer;
 
         &:disabled {
             opacity: .5;
             cursor: not-allowed;
         }
+
     }
 
     label.left {

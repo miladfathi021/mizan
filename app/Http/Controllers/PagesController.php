@@ -10,4 +10,9 @@ class PagesController extends Controller
     {
         return view('homepage.index');
     }
+
+    public function phoneCall()
+    {
+        return view('phone-call.phoneCall');
+    }
 }

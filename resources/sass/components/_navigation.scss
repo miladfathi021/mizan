@@ -26,6 +26,10 @@
     &__item {
         font-size: 1.8rem;
 
+        a {
+            color: $white-color;
+        }
+
         &:last-child {
             grid-column: -1 / -2;
             justify-self: left;
@@ -35,12 +39,27 @@
             cursor: pointer;
             font-family: 'Vazir-Light';
             transition: all .2s;
+            position: relative;
+
+            .la-user {
+                margin-left:.5rem;
+                font-size: 2.2rem;
+                color: $primary-color;
+            }
+
+            .la-angle-down {
+                margin-right:1rem;
+                color: $primary-color;
+            }
 
             a {
-                display: block;
+                display: flex;
+                align-items: center;
                 padding: .7rem 2rem;
+                color: $primary-color;
             }
         }
+
 
         a {
             transition: all .2s;
@@ -59,6 +78,47 @@
     &__logo {
         height: 10rem;
         transition: all .2s ease;
+    }
+
+    &__user-login {
+        width: 200%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100%;
+        margin-top: 1.5rem;
+        background-color: $white-color;
+        border-radius: 1rem;
+        box-shadow: 0 .4rem 1rem rgba(0, 0, 0, .4);
+        padding: 1rem;
+        cursor: default;
+
+
+        li {
+            a {
+                padding: .3rem 1rem;
+                display: block;
+            }
+            &:hover {
+                background-color: $lighter-gray-color;
+                border-radius: .5rem;
+            }
+        }
+
+        &--item {
+            cursor: pointer;
+            font-size: 1.6rem;
+            a {
+                color: $dark-color !important;
+            }
+
+        }
+
+        &--logout {
+            a {
+                color: $red-color !important;
+            }
+        }
     }
 }
 

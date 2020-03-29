@@ -199,43 +199,48 @@
                             <div class="registration__user--text">
                                 <h4>کاربر هستید؟</h4>
                                 <p>شما هم با عضویت در "میزان" از دریافت آنلاین خدمات لذت ببرید</p>
-                                <a @click.prevent="showRegisterLoginComponents">ثبت نام کاربر</a>
+                                <a v-if="userLogin" @click.prevent="showRegisterLoginComponents">شما عضو هستید</a>
+                                <a id="register-login" v-else @click.prevent="showRegisterLoginComponents">ثبت نام کاربر</a>
                             </div>
                         </div>
                     </div>
                 </section>
             </div>
         </main>
-        <register-login v-if="showRegisterLogin" v-outside-click="{ method: 'closeEvent' }"></register-login>
+        <register-login v-if="showRegisterLogin"></register-login>
     </div>
 </template>
 
 <script>
     import RegisterLogin from "../components/register-login/RegisterLogin";
     import { mapState } from "vuex";
+    import Cookie from "../helpers/cookies";
 
     export default {
         name: "HomePage",
         components: {RegisterLogin},
+
         data () {
             return {
-
+                userLogin: false,
             }
         },
 
         computed: {
             ...mapState({
                 showRegisterLogin: state => state.showRegisterLogin.show
-            }),
+            })
         },
 
         methods: {
             showRegisterLoginComponents () {
+                let cookies = new Cookie();
+                if (cookies.getCookie('user') !== null) {
+                    this.userLogin = true;
+                    return;
+                }
                 this.$store.dispatch('showRegisterLogin/show');
             },
-            closeEvent () {
-                this.$store.dispatch('showRegisterLogin/hide');
-            }
         },
     }
 </script>
