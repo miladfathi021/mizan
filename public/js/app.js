@@ -1961,7 +1961,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2264,6 +2263,9 @@ __webpack_require__.r(__webpack_exports__);
           }
         });
       }
+    },
+    closeEvent: function closeEvent() {
+      this.$store.dispatch('showRegisterLogin/hide');
     }
   }
 });
@@ -20407,8 +20409,6 @@ var render = function() {
                             [_c("a", [_vm._v(_vm._s(_vm.user.name))])]
                           ),
                           _vm._v(" "),
-                          _c("hr"),
-                          _vm._v(" "),
                           _c(
                             "li",
                             { staticClass: "navigation__user-login--logout" },
@@ -20759,7 +20759,17 @@ var render = function() {
   return _c("div", { staticClass: "register-login" }, [
     _c(
       "div",
-      { staticClass: "register-login__wrapper" },
+      {
+        directives: [
+          {
+            name: "click-outside",
+            rawName: "v-click-outside",
+            value: { ref: "register-login", method: "closeEvent" },
+            expression: "{ ref: 'register-login', method: 'closeEvent' }"
+          }
+        ],
+        staticClass: "register-login__wrapper"
+      },
       [
         _c(
           "span",
@@ -38236,8 +38246,10 @@ var Cookie = /*#__PURE__*/function () {
 // Vue.directive('outside-click', {
 //     bind: function (el, binding, vnode) {
 //         document.body.addEventListener('click', function (event) {
+//             console.log(el, event.target);
 //             if (
-//                 event.target === el
+//                 event.target !== el &&
+//                 event.target.id !== binding.value.ref
 //             ) {
 //                 vnode.context[binding.value.method](event);
 //             }

@@ -1,8 +1,10 @@
 // Vue.directive('outside-click', {
 //     bind: function (el, binding, vnode) {
 //         document.body.addEventListener('click', function (event) {
+//             console.log(el, event.target);
 //             if (
-//                 event.target === el
+//                 event.target !== el &&
+//                 event.target.id !== binding.value.ref
 //             ) {
 //                 vnode.context[binding.value.method](event);
 //             }

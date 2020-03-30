@@ -1,6 +1,6 @@
 <template>
-    <div class="register-login">
-        <div class="register-login__wrapper">
+    <div class="register-login" >
+        <div class="register-login__wrapper" v-click-outside="{ ref: 'register-login', method: 'closeEvent' }">
             <span @click="closeRegisterLoginComponent" class="register-login__close">
                 <i class="las la-times-circle"></i>
             </span>
@@ -76,6 +76,9 @@
                 } else {
                     this.errors.records({phone: {0: 'شماره موبایل صحیح نمی باشد.'} });
                 }
+            },
+            closeEvent () {
+                this.$store.dispatch('showRegisterLogin/hide');
             }
         }
     }

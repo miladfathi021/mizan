@@ -46,12 +46,12 @@
         props: ['phone', 'message'],
 
         data () {
-          return {
-              name: null,
-              password: null,
-              password_confirmation: null,
-              errors: new Errors(),
-          }
+            return {
+                name: null,
+                password: null,
+                password_confirmation: null,
+                errors: new Errors(),
+            }
         },
 
         methods: {

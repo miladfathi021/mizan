@@ -34,7 +34,6 @@
                         </a>
                         <ul v-if="showUserLoginDropDown" v-click-outside="{ ref: 'user-login-dropdown', method: 'userLoginDropDown' }" class="navigation__user-login">
                             <li class="navigation__user-login--item"><a>{{ user.name }}</a></li>
-                            <hr />
                             <li class="navigation__user-login--logout"><a @click.prevent="logout">خروج</a></li>
                         </ul>
                     </li>
