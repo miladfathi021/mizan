@@ -31,7 +31,7 @@ Route::prefix('v1')->namespace('v1\lawyer')->group(function () {
     Route::post('/lawyer-contracts', 'LawyerContractsController@store')->name('lawyer-contracts.store');
 });
 
-//
+// Check token => Helpers
 Route::prefix('v1')->namespace('v1\helpers')->middleware(['auth:api'])->group(function () {
     Route::post('/api-token-check', 'ApiTokensController@check')->name('api-token.check');
 });

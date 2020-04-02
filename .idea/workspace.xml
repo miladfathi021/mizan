@@ -3,11 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5230ede0-cb53-41ab-80e8-27fa5808bb1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/global/Navigation.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/global/Navigation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/register-login/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/register-login/Register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/register-login/RegisterLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/register-login/RegisterLogin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/helpers/outside-click.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/helpers/outside-click.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,7 +232,8 @@
       <workItem from="1585288565535" duration="33616000" />
       <workItem from="1585464833063" duration="97000" />
       <workItem from="1585465023575" duration="226000" />
-      <workItem from="1585557596281" duration="1019000" />
+      <workItem from="1585557596281" duration="1177000" />
+      <workItem from="1585638620533" duration="7419000" />
     </task>
     <servers />
   </component>
@@ -266,10 +265,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1584903505125" />
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585378553953">
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585820006913">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1585378553953" />
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1585820006913" />
     <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1585254133563">
       <screen x="0" y="23" width="1440" height="802" />
     </state>
@@ -290,22 +289,22 @@
     </state>
     <state width="1440" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1585230871971" />
     <state width="1440" height="255" key="GridCell.Tab.0.right/0.23.1440.802@0.23.1440.802" timestamp="1585254133562" />
-    <state x="497" y="257" key="NewPhpClassDialog" timestamp="1585414366628">
+    <state x="497" y="257" key="NewPhpClassDialog" timestamp="1585819451175">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="497" y="257" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1585414366628" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1585510524315">
+    <state x="497" y="257" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1585819451175" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1585819860773">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1585510524315" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1585819860773" />
     <state width="500" height="445" key="SwitcherDM/0.23.1440.802@0.23.1440.802" timestamp="1585115873503" />
     <state x="482" y="71" key="refactoring.ChangeSignatureDialog" timestamp="1583566748473">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="482" y="71" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1583566748473" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1585509570870">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1585831806173">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1585509570870" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1585831806173" />
   </component>
 </project>
