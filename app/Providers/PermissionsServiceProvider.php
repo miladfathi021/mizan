@@ -29,17 +29,18 @@ class PermissionsServiceProvider extends ServiceProvider
     {
         try {
             Permission::get()->map(function ($permission) {
+//                dd('$permission');
                 Gate::define($permission->slug, function ($user) use ($permission) {
                     return $user->hasPermissionTo($permission);
                 });
             });
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             report($e);
             return false;
         }
 
         Blade::directive('role', function ($role) {
-            return "@if(auth()->check() && auth()->user()->hasRole({$role}))";
+            return "@if(auth()->check() && auth()->user()->hasRole({$role})) :";
         });
 
         Blade::directive('endrole', function ($role) {

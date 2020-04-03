@@ -240,7 +240,7 @@
                     return;
                 }
                 this.$store.dispatch('showRegisterLogin/show');
-            },
+            }
         },
     }
 </script>
