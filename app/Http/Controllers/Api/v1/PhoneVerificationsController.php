@@ -12,8 +12,6 @@ use Illuminate\Support\Carbon;
 
 class PhoneVerificationsController extends Controller
 {
-    use SoftDeletes;
-
     /**
      *
      * Creates a verification code and sends it to the user's phone

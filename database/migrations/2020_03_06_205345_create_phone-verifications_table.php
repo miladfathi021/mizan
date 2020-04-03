@@ -19,7 +19,6 @@ class CreatePhoneVerificationsTable extends Migration
             $table->unsignedMediumInteger('code');
             $table->unsignedSmallInteger('status')->default(0);
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

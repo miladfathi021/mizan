@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5230ede0-cb53-41ab-80e8-27fa5808bb1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/sendVerificationCodeRegisteredNewAccountSmsNotification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/sendVerificationCodeRegisteredNewAccountSmsNotification.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/register-login/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/register-login/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/register-login/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/register-login/Register.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/register-login/RegisterLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/register-login/RegisterLogin.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/register-login/VerificationCode.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/register-login/VerificationCode.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/PhoneVerificationsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/PhoneVerificationsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_06_205345_create_phone-verifications_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_06_205345_create_phone-verifications_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
