@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLawyerContractsTable extends Migration
+class CreateLawyerAccountRequestTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateLawyerContractsTable extends Migration
      */
     public function up()
     {
-        Schema::create('lawyer_contracts', function (Blueprint $table) {
+        Schema::create('lawyer_account_request', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('license_number');
@@ -23,6 +23,7 @@ class CreateLawyerContractsTable extends Migration
             $table->unsignedBigInteger('phone');
             $table->unsignedSmallInteger('lawyer_experience');
             $table->unsignedSmallInteger('internet_consultation');
+            $table->unsignedSmallInteger('status')->default(0);
             $table->timestamps();
         });
     }
@@ -34,6 +35,6 @@ class CreateLawyerContractsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lawyer_contracts');
+        Schema::dropIfExists('lawyer_account_request');
     }
 }

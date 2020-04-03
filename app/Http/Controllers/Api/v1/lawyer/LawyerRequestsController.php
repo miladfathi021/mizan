@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Api\v1\lawyer;
 
 use App\Http\Controllers\Controller;
-use App\LawyerContract;
+use App\LawyerAccountRequest;
 use Illuminate\Http\Request;
 
-class LawyerContractsController extends Controller
+class LawyerRequestsController extends Controller
 {
     public function store()
     {
@@ -21,7 +21,7 @@ class LawyerContractsController extends Controller
             'internet_consultation' => 'required',
         ]);
 
-        LawyerContract::create($validate);
+        LawyerAccountRequest::create($validate);
 
         return response()->json([
             'status' => 201,

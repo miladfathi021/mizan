@@ -12,11 +12,11 @@ class LawyerRegisterTest extends TestCase
     use RefreshDatabase;
 
     /** @test **/
-    public function The_user_can_create_a_new_account_after_confirming_the_mobile_number()
+    public function Lawyer_can_send_request_for_create_a_new_account()
     {
         $this->withoutExceptionHandling();
 
-        $this->postJson('api/v1/lawyer-contracts', [
+        $this->postJson('api/v1/lawyer/register', [
             'name' => 'John Doe',
             'license_number' => '1234567',
             'national_no' => '1234567890',
@@ -27,16 +27,17 @@ class LawyerRegisterTest extends TestCase
             'internet_consultation' => 3,
         ])->assertJson(['status' => 201]);
 
-        $this->assertDatabaseHas('lawyer_contracts', [
+        $this->assertDatabaseHas('lawyer_account_request', [
             'name' => 'John Doe',
             'phone' => '09215420796',
+            'status' => 0
         ]);
     }
 
     /** @test **/
     public function name_is_required()
     {
-        $this->postJson('api/v1/lawyer-contracts', [
+        $this->postJson('api/v1/lawyer/register', [
             'name' => null,
             'license_number' => '1234567',
             'national_no' => '1234567890',
@@ -51,7 +52,7 @@ class LawyerRegisterTest extends TestCase
     /** @test **/
     public function license_number_is_required()
     {
-        $this->postJson('api/v1/lawyer-contracts', [
+        $this->postJson('api/v1/lawyer/register', [
             'name' => 'John Doe',
             'license_number' => null,
             'national_no' => '1234567890',
@@ -66,7 +67,7 @@ class LawyerRegisterTest extends TestCase
     /** @test **/
     public function national_no_is_required()
     {
-        $this->postJson('api/v1/lawyer-contracts', [
+        $this->postJson('api/v1/lawyer/register', [
             'name' => 'John Doe',
             'license_number' => '123456',
             'national_no' => null,
@@ -81,7 +82,7 @@ class LawyerRegisterTest extends TestCase
     /** @test **/
     public function province_is_required()
     {
-        $this->postJson('api/v1/lawyer-contracts', [
+        $this->postJson('api/v1/lawyer/register', [
             'name' => 'John Doe',
             'license_number' => '123456',
             'national_no' => '1234567890',
@@ -96,7 +97,7 @@ class LawyerRegisterTest extends TestCase
     /** @test **/
     public function city_is_required()
     {
-        $this->postJson('api/v1/lawyer-contracts', [
+        $this->postJson('api/v1/lawyer/register', [
             'name' => 'John Doe',
             'license_number' => '123456',
             'national_no' => '1234567890',
@@ -111,7 +112,7 @@ class LawyerRegisterTest extends TestCase
     /** @test **/
     public function phone_is_required()
     {
-        $this->postJson('api/v1/lawyer-contracts', [
+        $this->postJson('api/v1/lawyer/register', [
             'name' => 'John Doe',
             'license_number' => '123456',
             'national_no' => '1234567890',
@@ -126,7 +127,7 @@ class LawyerRegisterTest extends TestCase
     /** @test **/
     public function lawyer_experience_is_required()
     {
-        $this->postJson('api/v1/lawyer-contracts', [
+        $this->postJson('api/v1/lawyer/register', [
             'name' => 'John Doe',
             'license_number' => '123456',
             'national_no' => '1234567890',
@@ -141,7 +142,7 @@ class LawyerRegisterTest extends TestCase
     /** @test **/
     public function internet_consultation_is_required()
     {
-        $this->postJson('api/v1/lawyer-contracts', [
+        $this->postJson('api/v1/lawyer/register', [
             'name' => 'John Doe',
             'license_number' => '123456',
             'national_no' => '1234567890',
