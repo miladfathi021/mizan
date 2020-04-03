@@ -38,5 +38,5 @@ const app = new Vue({
                 }
             })
         }
-    }
+    },
 });

@@ -3,13 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="5230ede0-cb53-41ab-80e8-27fa5808bb1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Mizan/RolesAndPermissions/HasRolesAndPermissions.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mizan/RolesAndPermissions/HasRolesAndPermissions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Permission.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Permission.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/PermissionsServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/PermissionsServiceProvider.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Listeners/sendVerificationCodeRegisteredNewAccountSmsNotification.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/sendVerificationCodeRegisteredNewAccountSmsNotification.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/pages/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/HomePage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/register-login/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/register-login/Login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/register-login/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/register-login/Register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/register-login/RegisterLogin.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/register-login/RegisterLogin.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/register-login/VerificationCode.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/register-login/VerificationCode.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,11 +169,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Models/Phone" />
+      <recent name="$PROJECT_DIR$/app/Models/Users" />
+      <recent name="$PROJECT_DIR$/app/Models/Roles" />
       <recent name="$PROJECT_DIR$/resources/js/components/global" />
       <recent name="$PROJECT_DIR$/resources/js/components/register-login" />
-      <recent name="$PROJECT_DIR$/resources/sass/bases" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Api/v1" />
-      <recent name="$PROJECT_DIR$/app/Http/Controllers/Api/v1/users" />
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.PhoneVerificationTest.The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed">
@@ -297,11 +298,11 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="497" y="257" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1585819451175" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1585899812533">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1585922802434">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1585899812533" />
-    <state width="500" height="445" key="SwitcherDM/0.23.1440.802@0.23.1440.802" timestamp="1585856770287" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1585922802434" />
+    <state width="500" height="445" key="SwitcherDM/0.23.1440.802@0.23.1440.802" timestamp="1585918005480" />
     <state x="482" y="71" key="refactoring.ChangeSignatureDialog" timestamp="1583566748473">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

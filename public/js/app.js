@@ -2075,6 +2075,21 @@ __webpack_require__.r(__webpack_exports__);
 
         _this.errors.records(error.response.data.errors);
       });
+    },
+    justEnglish: function justEnglish($event) {
+      var keyCode = $event.keyCode ? $event.keyCode : $event.which; // only allow number and one dot
+
+      if (keyCode < 48 || keyCode > 57) {
+        this.errors.records({
+          password: {
+            0: 'زبان کیبورد را به انگلیسی تغییر دهید'
+          }
+        });
+        $event.preventDefault();
+        return;
+      }
+
+      this.errors = new _helpers_Errors__WEBPACK_IMPORTED_MODULE_0__["default"]();
     }
   }
 });
@@ -2165,6 +2180,21 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         _this.errors.records(error.response.data.errors);
       });
+    },
+    justEnglish: function justEnglish($event) {
+      var keyCode = $event.keyCode ? $event.keyCode : $event.which; // only allow number and one dot
+
+      if (keyCode < 48 || keyCode > 57) {
+        this.errors.records({
+          password: {
+            0: 'زبان کیبورد را به انگلیسی تغییر دهید'
+          }
+        });
+        $event.preventDefault();
+        return;
+      }
+
+      this.errors = new _helpers_Errors__WEBPACK_IMPORTED_MODULE_0__["default"]();
     }
   }
 });
@@ -2266,6 +2296,21 @@ __webpack_require__.r(__webpack_exports__);
     },
     closeEvent: function closeEvent() {
       this.$store.dispatch('showRegisterLogin/hide');
+    },
+    justEnglish: function justEnglish($event) {
+      var keyCode = $event.keyCode ? $event.keyCode : $event.which; // only allow number and one dot
+
+      if (keyCode < 48 || keyCode > 57) {
+        this.errors.records({
+          phone: {
+            0: 'زبان کیبورد را به انگلیسی تغییر دهید'
+          }
+        });
+        $event.preventDefault();
+        return;
+      }
+
+      this.errors = new _helpers_Errors__WEBPACK_IMPORTED_MODULE_1__["default"]();
     }
   }
 });
@@ -2356,8 +2401,12 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
-    accept: function accept() {
+    accept: function accept($event) {
       var _this = this;
+
+      if ($event.target.value === '') {
+        return;
+      }
 
       this.code = Number(this.first_code + this.second_code + this.third_code + this.fourth_code);
       axios.post('/api/v1/success-phone-verification', {
@@ -2400,6 +2449,26 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         console.log(error.response.data.errors);
       });
+    },
+    justEnglish: function justEnglish($event) {
+      var keyCode = $event.keyCode ? $event.keyCode : $event.which; // only allow number and one dot
+
+      if (keyCode < 48 || keyCode > 57) {
+        this.errors.records({
+          code: {
+            0: 'زبان کیبورد را به انگلیسی تغییر دهید'
+          }
+        });
+        $event.preventDefault();
+        return;
+      }
+
+      this.errors = new _helpers_Errors__WEBPACK_IMPORTED_MODULE_1__["default"]();
+    },
+    checkInput: function checkInput($event) {
+      if ($event.target.value !== '') {
+        $event.target.nextElementSibling.focus();
+      }
     }
   }
 });
@@ -20521,6 +20590,7 @@ var render = function() {
             attrs: { type: "password", id: "password" },
             domProps: { value: _vm.password },
             on: {
+              keypress: _vm.justEnglish,
               input: function($event) {
                 if ($event.target.composing) {
                   return
@@ -20661,6 +20731,7 @@ var render = function() {
             attrs: { type: "password", id: "password" },
             domProps: { value: _vm.password },
             on: {
+              keypress: _vm.justEnglish,
               input: function($event) {
                 if ($event.target.composing) {
                   return
@@ -20694,6 +20765,7 @@ var render = function() {
             attrs: { type: "password", id: "password_confirmation" },
             domProps: { value: _vm.password_confirmation },
             on: {
+              keypress: _vm.justEnglish,
               input: function($event) {
                 if ($event.target.composing) {
                   return
@@ -20805,6 +20877,7 @@ var render = function() {
                       attrs: { type: "tel", id: "phone" },
                       domProps: { value: _vm.phone },
                       on: {
+                        keypress: _vm.justEnglish,
                         input: function($event) {
                           if ($event.target.composing) {
                             return
@@ -20956,9 +21029,8 @@ var render = function() {
                       attrs: { type: "text", pattern: "[0-9]{1}", id: "code1" },
                       domProps: { value: _vm.first_code },
                       on: {
-                        keyup: function($event) {
-                          return $event.target.nextElementSibling.focus()
-                        },
+                        keypress: _vm.justEnglish,
+                        keyup: _vm.checkInput,
                         input: function($event) {
                           if ($event.target.composing) {
                             return
@@ -20980,9 +21052,8 @@ var render = function() {
                       attrs: { type: "text", pattern: "[0-9]{1}", id: "code2" },
                       domProps: { value: _vm.second_code },
                       on: {
-                        keyup: function($event) {
-                          return $event.target.nextElementSibling.focus()
-                        },
+                        keypress: _vm.justEnglish,
+                        keyup: _vm.checkInput,
                         input: function($event) {
                           if ($event.target.composing) {
                             return
@@ -21004,9 +21075,8 @@ var render = function() {
                       attrs: { type: "text", pattern: "[0-9]{1}", id: "code3" },
                       domProps: { value: _vm.third_code },
                       on: {
-                        keyup: function($event) {
-                          return $event.target.nextElementSibling.focus()
-                        },
+                        keypress: _vm.justEnglish,
+                        keyup: _vm.checkInput,
                         input: function($event) {
                           if ($event.target.composing) {
                             return
@@ -21033,6 +21103,7 @@ var render = function() {
                       },
                       domProps: { value: _vm.fourth_code },
                       on: {
+                        keypress: _vm.justEnglish,
                         keyup: _vm.accept,
                         input: function($event) {
                           if ($event.target.composing) {
@@ -21055,7 +21126,7 @@ var render = function() {
                   _c(
                     "button",
                     {
-                      attrs: { disabled: _vm.expire },
+                      attrs: { disabled: _vm.expire, value: "t" },
                       on: {
                         click: function($event) {
                           $event.preventDefault()

@@ -13,7 +13,7 @@
 
                 <div class="form-group">
                     <label for="password">کلمه عبور</label>
-                    <input type="password" id="password" v-model="password"/>
+                    <input type="password" id="password" v-model="password" @keypress="justEnglish"/>
                     <p class="feedback feedback--danger" v-if="errors.has('password')">{{ errors.get('password') }}</p>
                 </div>
 
@@ -59,7 +59,20 @@
                     }
                     this.errors.records(error.response.data.errors);
                 })
-            }
+            },
+            justEnglish ($event) {
+                let keyCode = ($event.keyCode ? $event.keyCode : $event.which);
+
+                // only allow number and one dot
+                if ((keyCode < 48 || keyCode > 57)) {
+                    this.errors.records({password: {0: 'زبان کیبورد را به انگلیسی تغییر دهید'}});
+                    $event.preventDefault();
+                    return;
+                }
+
+                this.errors = new Errors();
+
+            },
         }
     }
 </script>

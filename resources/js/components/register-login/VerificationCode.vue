@@ -19,16 +19,16 @@
                     <div class="form-group">
                         <label for="code1">کد فعالسازی</label>
                         <div class="verification-code">
-                            <input type="text" pattern="[0-9]{1}" id="code1" v-model="first_code" @keyup="$event.target.nextElementSibling.focus()"/>
-                            <input type="text" pattern="[0-9]{1}" id="code2" v-model="second_code" @keyup="$event.target.nextElementSibling.focus()"/>
-                            <input type="text" pattern="[0-9]{1}" id="code3" v-model="third_code" @keyup="$event.target.nextElementSibling.focus()"/>
-                            <input type="text" pattern="[0-9]{1}" id="code4" v-model="fourth_code" maxlength="1" @keyup="accept"/>
+                            <input type="text" pattern="[0-9]{1}" id="code1" v-model="first_code" @keypress="justEnglish" @keyup="checkInput"/>
+                            <input type="text" pattern="[0-9]{1}" id="code2" v-model="second_code" @keypress="justEnglish" @keyup="checkInput"/>
+                            <input type="text" pattern="[0-9]{1}" id="code3" v-model="third_code" @keypress="justEnglish" @keyup="checkInput"/>
+                            <input type="text" pattern="[0-9]{1}" id="code4" v-model="fourth_code" @keypress="justEnglish" maxlength="1" @keyup="accept"/>
                         </div>
                         <p class="feedback feedback--danger" v-if="errors.has('code')">{{ errors.get('code') }}</p>
                     </div>
 
                     <div class="form-group">
-                        <button @click.prevent="accept" :disabled="expire">تایید</button>
+                        <button @click.prevent="accept" :disabled="expire" value="t">تایید</button>
                     </div>
                 </form>
             </div>
@@ -76,7 +76,11 @@
         },
 
         methods: {
-            accept () {
+            accept ($event) {
+
+                if ($event.target.value === '') {
+                    return;
+                }
                 this.code = Number(this.first_code + this.second_code + this.third_code + this.fourth_code);
                 axios.post('/api/v1/success-phone-verification', {
                     phone: this.phone,
@@ -110,6 +114,24 @@
                 }).catch(error => {
                     console.log(error.response.data.errors);
                 })
+            },
+            justEnglish ($event) {
+                let keyCode = ($event.keyCode ? $event.keyCode : $event.which);
+
+                // only allow number and one dot
+                if ((keyCode < 48 || keyCode > 57)) {
+                    this.errors.records({code: {0: 'زبان کیبورد را به انگلیسی تغییر دهید'}});
+                    $event.preventDefault();
+                    return;
+                }
+
+                this.errors = new Errors();
+
+            },
+            checkInput ($event) {
+                if ($event.target.value !== '') {
+                    $event.target.nextElementSibling.focus();
+                }
             }
         }
     }

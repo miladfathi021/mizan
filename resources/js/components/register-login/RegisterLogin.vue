@@ -13,7 +13,7 @@
                     <form>
                         <div class="form-group">
                             <label for="phone">شماره موبایل</label>
-                            <input type="tel" id="phone" v-model="phone"/>
+                            <input type="tel" id="phone" v-model="phone" @keypress="justEnglish"/>
                             <p class="feedback feedback--danger" v-if="errors.has('phone')">{{ errors.get('phone') }}</p>
                         </div>
 
@@ -79,6 +79,19 @@
             },
             closeEvent () {
                 this.$store.dispatch('showRegisterLogin/hide');
+            },
+            justEnglish ($event) {
+                let keyCode = ($event.keyCode ? $event.keyCode : $event.which);
+
+                // only allow number and one dot
+                if ((keyCode < 48 || keyCode > 57)) {
+                    this.errors.records({phone: {0: 'زبان کیبورد را به انگلیسی تغییر دهید'}});
+                    $event.preventDefault();
+                    return;
+                }
+
+                this.errors = new Errors();
+
             }
         }
     }

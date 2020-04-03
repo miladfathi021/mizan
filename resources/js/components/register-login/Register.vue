@@ -20,13 +20,13 @@
 
                 <div class="form-group">
                     <label for="password">کلمه عبور</label>
-                    <input type="password" id="password" v-model="password"/>
+                    <input type="password" id="password" @keypress="justEnglish" v-model="password"/>
                     <p class="feedback feedback--danger" v-if="errors.has('password')">{{ errors.get('password') }}</p>
                 </div>
 
                 <div class="form-group">
                     <label for="password_confirmation">تکرار کلمه عبور</label>
-                    <input type="password" id="password_confirmation" v-model="password_confirmation"/>
+                    <input type="password" id="password_confirmation" @keypress="justEnglish" v-model="password_confirmation"/>
                 </div>
 
                 <div class="form-group">
@@ -69,8 +69,23 @@
                 }).catch(error => {
                     this.errors.records(error.response.data.errors);
                 })
-            }
-        }
+            },
+
+            justEnglish ($event) {
+                let keyCode = ($event.keyCode ? $event.keyCode : $event.which);
+
+                // only allow number and one dot
+                if ((keyCode < 48 || keyCode > 57)) {
+                    this.errors.records({password: {0: 'زبان کیبورد را به انگلیسی تغییر دهید'}});
+                    $event.preventDefault();
+                    return;
+                }
+
+                this.errors = new Errors();
+
+            },
+        },
+
     }
 </script>
 

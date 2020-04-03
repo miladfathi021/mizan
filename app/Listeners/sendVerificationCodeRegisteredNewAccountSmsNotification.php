@@ -23,7 +23,7 @@ class sendVerificationCodeRegisteredNewAccountSmsNotification
     /**
      * Handle the event.
      *
-     * @param  object  $event
+     * @param PhoneVerificationEvent $event
      * @return void
      */
     public function handle(PhoneVerificationEvent $event)
