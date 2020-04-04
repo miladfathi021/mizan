@@ -16,6 +16,7 @@ class CreateLawyersTable extends Migration
         Schema::create('lawyers', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->unsignedSmallInteger('gender');
             $table->unsignedBigInteger('license_number');
             $table->unsignedBigInteger('national_no');
             $table->string('province');

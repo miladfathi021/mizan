@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use App\Events\AccountInformationToLawyerEvent;
 use App\Events\PhoneVerificationEvent;
+use App\Listeners\SendAccountInformationToLawyertBySms;
 use App\Listeners\sendVerificationCodeRegisteredNewAccountSmsNotification;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -21,7 +23,10 @@ class EventServiceProvider extends ServiceProvider
             SendEmailVerificationNotification::class,
         ],
         PhoneVerificationEvent::class => [
-            sendVerificationCodeRegisteredNewAccountSmsNotification::class
+            SendVerificationCodeRegisteredNewAccountSmsNotification::class
+        ],
+        AccountInformationToLawyerEvent::class => [
+            SendAccountInformationToLawyertBySms::class
         ]
     ];
 

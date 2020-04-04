@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Lawyer extends Model
 {
-    protected $fillable = ['user_id', 'license_number', 'national_no', 'province', 'city', 'lawyer_experience'];
+    protected $fillable = ['user_id', 'gender', 'license_number', 'national_no', 'province', 'city', 'lawyer_experience'];
 
     public function user()
     {

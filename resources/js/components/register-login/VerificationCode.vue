@@ -16,6 +16,12 @@
                         </label>
                     </div>
 
+                    <div class="form-group" v-if="!expired">
+                        <label class="left">
+                            <span class="resend">ارسال مجدد کد بعد از {{ timer }} ثانیه دیگر</span>
+                        </label>
+                    </div>
+
                     <div class="form-group">
                         <label for="code1">کد فعالسازی</label>
                         <div class="verification-code">
@@ -28,7 +34,7 @@
                     </div>
 
                     <div class="form-group">
-                        <button @click.prevent="accept" :disabled="expire" value="t">تایید</button>
+                        <button @click.prevent="accept" value="t">تایید</button>
                     </div>
                 </form>
             </div>
@@ -54,6 +60,8 @@
                 third_code: null,
                 fourth_code: null,
                 code: null,
+                countDown_second: 59,
+                countDown_minute: 1,
                 type: 'current',
                 msg: this.message,
                 expired: false,
@@ -72,10 +80,35 @@
 
             expire () {
                 return this.expired;
+            },
+            timer () {
+                let sec = this.countDown_second < 10 ? '0' + this.countDown_second : this.countDown_second;
+                let min = this.countDown_minute < 10 ? '0' + this.countDown_minute : this.countDown_minute;
+                return min + ':' + sec;
             }
         },
 
+        created() {
+            this.countDownTimer();
+        },
+
         methods: {
+            countDownTimer () {
+                if (this.countDown_second + 1 > 0) {
+                    setTimeout(() => {
+                        this.countDown_second -= 1;
+                        this.countDownTimer();
+                    }, 1000);
+                } else if (this.countDown_minute > 0){
+                    this.countDown_second = 59;
+                    this.countDown_minute -= 1;
+                    this.countDownTimer();
+                } else {
+                    this.countDown_second = 0;
+                    this.expired = true;
+                }
+            },
+
             accept ($event) {
 
                 if ($event.target.value === '') {
@@ -110,6 +143,9 @@
                     if (response.data.status === 201) {
                         this.msg = response.data.message;
                         this.expired = false;
+                        this.countDown_minute = 1;
+                        this.countDown_second = 59;
+                        this.countDownTimer();
                     }
                 }).catch(error => {
                     console.log(error.response.data.errors);

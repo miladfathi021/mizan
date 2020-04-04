@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api\v1\admin;
 
+use App\Events\AccountInformationToLawyerEvent;
 use App\Http\Controllers\Controller;
 use App\Lawyer;
 use App\User;
@@ -25,26 +26,27 @@ class LawyersController extends Controller
         ]);
 
         $user = User::where('phone', request()->phone)->first();
+        $password = Str::random(7);
 
         if (!$user) {
-            $password = Str::random(7);
 
             $user = User::create([
                 'name' => request()->name,
                 'phone' => request()->phone,
                 'password' => Hash::make($password)
             ]);
-
-            // Send sms "wip"
         }
 
         $lawyer = $user->lawyer()->create([
+            'gender' => request()->gender,
             'license_number' => request()->license_number,
             'national_no' => request()->national_no,
             'province' => request()->province,
             'city' => request()->city,
             'lawyer_experience' => request()->lawyer_experience,
         ]);
+
+        event(new AccountInformationToLawyerEvent($user, $password));
 
         return response()->json([
             'user' => $user,

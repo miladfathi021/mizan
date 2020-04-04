@@ -14,15 +14,17 @@ class PhoneVerificationEvent
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
 
-    public $phone_verification;
+    public $phone;
+    public $message;
 
     /**
      * Create a new event instance.
      *
-     * @param $phone_verification
+     * @param $phone
      */
-    public function __construct($phone_verification)
+    public function __construct($phone)
     {
-        $this->phone_verification = $phone_verification;
+        $this->phone = $phone['phone'];
+        $this->message = "کد فعالسازی: " . $phone['code'] . " میزان";
     }
 }

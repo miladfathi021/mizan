@@ -6,24 +6,26 @@ namespace App\Mizan\Sms;
 
 use Illuminate\Support\Facades\Http;
 
-class SmsIr_sendVerificationCode
+class SmsIr_sendMessage
 {
     public $token;
-    public $phone_verification;
+    public $phone;
+    public $message;
 
-    public function __construct($token, $phone_verification)
+    public function __construct($token, $phone, $message)
     {
         $this->token = $token;
-        $this->phone_verification = $phone_verification;
+        $this->phone = $phone;
+        $this->message = $message;
     }
 
     public function store()
     {
-//        dd($this->token);
-        $phone = [$this->phone_verification['phone']];
+//        dd($this->token );
+        $phone = [$this->phone];
 
         $message = [];
-        $message[] = "کد فعالسازی: " . $this->phone_verification['code'] . " میزان";
+        $message[] = $this->message;
 
         $result = Http::withHeaders([
             'x-sms-ir-secure-token' => $this->token

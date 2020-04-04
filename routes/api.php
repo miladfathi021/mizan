@@ -26,6 +26,6 @@ Route::prefix('v1')->namespace('v1\helpers')->middleware(['auth:api'])->group(fu
 });
 
 
-Route::prefix('v1/admin')->namespace('v1\admin')->middleware(['auth:api', 'role:management-lawyers'])->group(function () {
-    Route::post('/lawyer/register', 'LawyersController@store');
+Route::prefix('v1/admin')->namespace('v1\admin')->group(function () {
+    Route::post('/lawyer/register', 'LawyersController@store')->middleware(['auth:api', 'role:management-lawyers']);
 });

@@ -16,6 +16,7 @@ class CreateLawyerAccountRequestTable extends Migration
         Schema::create('lawyer_account_request', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->unsignedSmallInteger('gender');
             $table->string('license_number');
             $table->unsignedBigInteger('national_no');
             $table->string('province');

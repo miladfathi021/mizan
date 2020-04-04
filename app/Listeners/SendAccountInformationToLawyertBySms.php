@@ -2,13 +2,13 @@
 
 namespace App\Listeners;
 
-use App\Events\PhoneVerificationEvent;
-use App\Mizan\Sms\SmsIr_sendVerificationCode;
+use App\Events\AccountInformationToLawyerEvent;
 use App\Mizan\Sms\SmsIr_GetToken;
+use App\Mizan\Sms\SmsIr_sendMessage;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 
-class sendVerificationCodeRegisteredNewAccountSmsNotification
+class SendAccountInformationToLawyertBySms
 {
     /**
      * Create the event listener.
@@ -23,17 +23,15 @@ class sendVerificationCodeRegisteredNewAccountSmsNotification
     /**
      * Handle the event.
      *
-     * @param PhoneVerificationEvent $event
+     * @param AccountInformationToLawyerEvent $event
      * @return void
      */
-    public function handle(PhoneVerificationEvent $event)
+    public function handle(AccountInformationToLawyerEvent $event)
     {
         $token = new SmsIr_GetToken();
         $token = $token->store();
 
-        $send = new SmsIr_sendVerificationCode($token, $event->phone_verification);
+        $send = new SmsIr_sendMessage($token, $event->phone, $event->message);
         $send->store();
-
-
     }
 }

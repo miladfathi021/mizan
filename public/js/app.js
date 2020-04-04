@@ -2368,6 +2368,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2383,6 +2389,8 @@ __webpack_require__.r(__webpack_exports__);
       third_code: null,
       fourth_code: null,
       code: null,
+      countDown_second: 59,
+      countDown_minute: 1,
       type: 'current',
       msg: this.message,
       expired: false,
@@ -2398,11 +2406,37 @@ __webpack_require__.r(__webpack_exports__);
     },
     expire: function expire() {
       return this.expired;
+    },
+    timer: function timer() {
+      var sec = this.countDown_second < 10 ? '0' + this.countDown_second : this.countDown_second;
+      var min = this.countDown_minute < 10 ? '0' + this.countDown_minute : this.countDown_minute;
+      return min + ':' + sec;
     }
   },
+  created: function created() {
+    this.countDownTimer();
+  },
   methods: {
-    accept: function accept($event) {
+    countDownTimer: function countDownTimer() {
       var _this = this;
+
+      if (this.countDown_second + 1 > 0) {
+        setTimeout(function () {
+          _this.countDown_second -= 1;
+
+          _this.countDownTimer();
+        }, 1000);
+      } else if (this.countDown_minute > 0) {
+        this.countDown_second = 59;
+        this.countDown_minute -= 1;
+        this.countDownTimer();
+      } else {
+        this.countDown_second = 0;
+        this.expired = true;
+      }
+    },
+    accept: function accept($event) {
+      var _this2 = this;
 
       if ($event.target.value === '') {
         return;
@@ -2414,17 +2448,17 @@ __webpack_require__.r(__webpack_exports__);
         code: this.code === 0 ? null : this.code
       }).then(function (response) {
         if (response.data.status === 200) {
-          _this.type = response.data.next;
-          _this.msg = response.data.message;
+          _this2.type = response.data.next;
+          _this2.msg = response.data.message;
         }
       })["catch"](function (error) {
         if (error.response.data.status === 401) {
           if ('time' in error.response.data) {
-            _this.expired = true;
-            _this.msg = error.response.data.message;
+            _this2.expired = true;
+            _this2.msg = error.response.data.message;
           }
 
-          _this.errors.records({
+          _this2.errors.records({
             code: {
               0: error.response.data.message
             }
@@ -2433,18 +2467,22 @@ __webpack_require__.r(__webpack_exports__);
           return;
         }
 
-        _this.errors.records(error.response.data.errors);
+        _this2.errors.records(error.response.data.errors);
       });
     },
     resendVerificationCode: function resendVerificationCode() {
-      var _this2 = this;
+      var _this3 = this;
 
       axios.post('/api/v1/phone-verification', {
         phone: this.phone
       }).then(function (response) {
         if (response.data.status === 201) {
-          _this2.msg = response.data.message;
-          _this2.expired = false;
+          _this3.msg = response.data.message;
+          _this3.expired = false;
+          _this3.countDown_minute = 1;
+          _this3.countDown_second = 59;
+
+          _this3.countDownTimer();
         }
       })["catch"](function (error) {
         console.log(error.response.data.errors);
@@ -21011,6 +21049,20 @@ var render = function() {
                     ])
                   : _vm._e(),
                 _vm._v(" "),
+                !_vm.expired
+                  ? _c("div", { staticClass: "form-group" }, [
+                      _c("label", { staticClass: "left" }, [
+                        _c("span", { staticClass: "resend" }, [
+                          _vm._v(
+                            "ارسال مجدد کد بعد از " +
+                              _vm._s(_vm.timer) +
+                              " ثانیه دیگر"
+                          )
+                        ])
+                      ])
+                    ])
+                  : _vm._e(),
+                _vm._v(" "),
                 _c("div", { staticClass: "form-group" }, [
                   _c("label", { attrs: { for: "code1" } }, [
                     _vm._v("کد فعالسازی")
@@ -21126,7 +21178,7 @@ var render = function() {
                   _c(
                     "button",
                     {
-                      attrs: { disabled: _vm.expire, value: "t" },
+                      attrs: { value: "t" },
                       on: {
                         click: function($event) {
                           $event.preventDefault()

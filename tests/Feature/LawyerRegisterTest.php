@@ -26,8 +26,11 @@ class LawyerRegisterTest extends TestCase
 
         $lawyer_request = factory(LawyerAccountRequest::class)->create();
 
+//        dd($lawyer_request);
+
         $this->postJson('/api/v1/admin/lawyer/register', [
             "name" => $lawyer_request->name,
+            "gender" => $lawyer_request->gender,
             "license_number" => $lawyer_request->license_number,
             "national_no" => $lawyer_request->national_no,
             "province" => $lawyer_request->province,
@@ -59,6 +62,7 @@ class LawyerRegisterTest extends TestCase
 
         $this->postJson('/api/v1/admin/lawyer/register', [
             "name" => null,
+            "gender" => $lawyer_request->gender,
             "license_number" => $lawyer_request->license_number,
             "national_no" => $lawyer_request->national_no,
             "province" => $lawyer_request->province,
@@ -79,6 +83,7 @@ class LawyerRegisterTest extends TestCase
 
         $this->postJson('/api/v1/admin/lawyer/register', [
             "name" => $lawyer_request->name,
+            "gender" => $lawyer_request->gender,
             "license_number" => null,
             "national_no" => $lawyer_request->national_no,
             "province" => $lawyer_request->province,
@@ -99,6 +104,7 @@ class LawyerRegisterTest extends TestCase
 
         $this->postJson('/api/v1/admin/lawyer/register', [
             "name" => $lawyer_request->name,
+            "gender" => $lawyer_request->gender,
             "license_number" => $lawyer_request->license_number,
             "national_no" => null,
             "province" => $lawyer_request->province,
@@ -119,6 +125,7 @@ class LawyerRegisterTest extends TestCase
 
         $this->postJson('/api/v1/admin/lawyer/register', [
             "name" => $lawyer_request->name,
+            "gender" => $lawyer_request->gender,
             "license_number" => $lawyer_request->license_number,
             "national_no" => $lawyer_request->national_no,
             "province" => null,
@@ -134,11 +141,12 @@ class LawyerRegisterTest extends TestCase
         $user = $this->singIn();
 
         $this->giveManagementLawyerRoleTo($user);
-        
+
         $lawyer_request = factory(LawyerAccountRequest::class)->create();
 
         $this->postJson('/api/v1/admin/lawyer/register', [
             "name" => $lawyer_request->name,
+            "gender" => $lawyer_request->gender,
             "license_number" => $lawyer_request->license_number,
             "national_no" => $lawyer_request->national_no,
             "province" => $lawyer_request->province,
@@ -172,6 +180,7 @@ class LawyerRegisterTest extends TestCase
 
         $this->postJson('/api/v1/admin/lawyer/register', [
             "name" => $lawyer_request->name,
+            "gender" => $lawyer_request->gender,
             "license_number" => $lawyer_request->license_number,
             "national_no" => $lawyer_request->national_no,
             "province" => $lawyer_request->province,
@@ -180,4 +189,6 @@ class LawyerRegisterTest extends TestCase
             "lawyer_experience" => $lawyer_request->lawyer_experience,
         ])->assertStatus(401);
     }
+
+
 }
