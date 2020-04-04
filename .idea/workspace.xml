@@ -3,11 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5230ede0-cb53-41ab-80e8-27fa5808bb1f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/lawyer/LawyerContractsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/lawyer/LawyerRequestsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/LawyerContract.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/LawyerAccountRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_10_202411_create_lawyer_contracts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_10_202411_create_lawyer_account_request_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/lawyer/LawyerRequestsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/lawyer/LawyersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/LawyerAccountRequestTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,24 +174,24 @@
     </key>
   </component>
   <component name="RunManager" selected="PHPUnit.LawyerRegisterTest">
-    <configuration name="HomePageTest.The_visitor_can_see_the_homepage" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\HomePageTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/HomePageTest.php" method="The_visitor_can_see_the_homepage" scope="Method" />
-      <method v="2" />
-    </configuration>
     <configuration name="LawyerRegisterTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\LawyerRegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="LawyerRegisterTest.Lawyer_can_send_request_for_create_a_new_account" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\LawyerRegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" method="Lawyer_can_send_request_for_create_a_new_account" scope="Method" />
+    <configuration name="LawyerRegisterTest.Manager_can_create_a_account_for_a_new_lawyer" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LawyerRegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" method="Manager_can_create_a_account_for_a_new_lawyer" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="MainPageTest.The_visitor_can_see_the_homepage" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\MainPageTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/MainPageTest.php" method="The_visitor_can_see_the_homepage" scope="Method" />
+    <configuration name="LawyerRegisterTest.Only_the_manager_can_create_a_new_account_for_the_lawyer" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LawyerRegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" method="Only_the_manager_can_create_a_new_account_for_the_lawyer" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="PhoneVerificationTest.The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\PhoneVerificationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" method="The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed" scope="Method" />
+    <configuration name="LawyerRegisterTest.city_phone_and_lawyer_experience_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LawyerRegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" method="city_phone_and_lawyer_experience_is_required" scope="Method" />
+      <method v="2" />
+    </configuration>
+    <configuration name="LawyerRegisterTest.province_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\LawyerRegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" method="province_is_required" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -201,10 +201,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="PHPUnit.LawyerRegisterTest" />
-        <item itemvalue="PHPUnit.LawyerRegisterTest.Lawyer_can_send_request_for_create_a_new_account" />
-        <item itemvalue="PHPUnit.PhoneVerificationTest.The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed" />
-        <item itemvalue="PHPUnit.HomePageTest.The_visitor_can_see_the_homepage" />
-        <item itemvalue="PHPUnit.MainPageTest.The_visitor_can_see_the_homepage" />
+        <item itemvalue="PHPUnit.LawyerRegisterTest.Manager_can_create_a_account_for_a_new_lawyer" />
+        <item itemvalue="PHPUnit.LawyerRegisterTest.Only_the_manager_can_create_a_new_account_for_the_lawyer" />
+        <item itemvalue="PHPUnit.LawyerRegisterTest.city_phone_and_lawyer_experience_is_required" />
+        <item itemvalue="PHPUnit.LawyerRegisterTest.province_is_required" />
       </list>
     </recent_temporary>
   </component>
@@ -236,6 +236,7 @@
       <workItem from="1585465023575" duration="226000" />
       <workItem from="1585557596281" duration="1177000" />
       <workItem from="1585638620533" duration="22566000" />
+      <workItem from="1585934192547" duration="16179000" />
     </task>
     <servers />
   </component>
@@ -251,62 +252,62 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="351" y="60" key="#RegisterTest.the_user_can_register_on_the_site/0.0.1440.900@0.0.1440.900" timestamp="1583519051885" />
-    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1583740696835">
+    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser" timestamp="1585982632928">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1583740696835" />
+    <state x="533" y="173" key="#com.intellij.ide.util.MemberChooser/0.0.1440.900@0.0.1440.900" timestamp="1585982632928" />
     <state x="408" y="185" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1583530099502">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="408" y="185" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1440.900@0.0.1440.900" timestamp="1583530099502" />
-    <state x="89" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585929358166">
+    <state x="89" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1585944325808">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="89" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1585929358166" />
+    <state x="89" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1440.900@0.0.1440.900" timestamp="1585944325808" />
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1584903505125">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1584903505125" />
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585820006913">
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1585988044021">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1585820006913" />
-    <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1585929437767">
+    <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1585988044021" />
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1585988235045">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1585929437767" />
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1585988235045" />
     <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.23.1440.802@0.23.1440.802" timestamp="1585254133563" />
-    <state width="1440" height="255" key="GridCell.Tab.0.center" timestamp="1585929437763">
+    <state width="1440" height="255" key="GridCell.Tab.0.center" timestamp="1585988235044">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1585929437763" />
+    <state width="1440" height="255" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1585988235044" />
     <state width="1440" height="255" key="GridCell.Tab.0.center/0.23.1440.802@0.23.1440.802" timestamp="1585254133561" />
-    <state width="1440" height="255" key="GridCell.Tab.0.left" timestamp="1585929437761">
+    <state width="1440" height="255" key="GridCell.Tab.0.left" timestamp="1585988235043">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1585929437761" />
+    <state width="1440" height="255" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1585988235043" />
     <state width="1440" height="255" key="GridCell.Tab.0.left/0.23.1440.802@0.23.1440.802" timestamp="1585254133560" />
-    <state width="1440" height="255" key="GridCell.Tab.0.right" timestamp="1585929437764">
+    <state width="1440" height="255" key="GridCell.Tab.0.right" timestamp="1585988235045">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1585929437764" />
+    <state width="1440" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1585988235045" />
     <state width="1440" height="255" key="GridCell.Tab.0.right/0.23.1440.802@0.23.1440.802" timestamp="1585254133562" />
     <state x="497" y="257" key="NewPhpClassDialog" timestamp="1585819451175">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="497" y="257" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1585819451175" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1585929424740">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1585988192626">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1585929424740" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1585988192626" />
     <state width="500" height="445" key="SwitcherDM/0.23.1440.802@0.23.1440.802" timestamp="1585918005480" />
     <state x="482" y="71" key="refactoring.ChangeSignatureDialog" timestamp="1583566748473">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="482" y="71" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1583566748473" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1585928505562">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1585987353387">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1585928505562" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1585987353387" />
   </component>
 </project>

@@ -6,8 +6,13 @@ use App\Http\Controllers\Controller;
 use App\LawyerAccountRequest;
 use Illuminate\Http\Request;
 
-class LawyerRequestsController extends Controller
+class LawyersController extends Controller
 {
+    /**
+     * create a new lawyer account request.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function store()
     {
         $validate = request()->validate([

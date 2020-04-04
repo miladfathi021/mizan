@@ -38,4 +38,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function lawyer()
+    {
+        return $this->hasOne(Lawyer::class, 'user_id');
+    }
 }

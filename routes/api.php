@@ -17,10 +17,15 @@ Route::prefix('v1')->namespace('v1\users')->group(function () {
 
 // Lawyer Account Request
 Route::prefix('v1/lawyer')->namespace('v1\lawyer')->group(function () {
-    Route::post('/register', 'LawyerRequestsController@store');
+    Route::post('/register', 'LawyersController@store');
 });
 
 // Check token => Helpers
 Route::prefix('v1')->namespace('v1\helpers')->middleware(['auth:api'])->group(function () {
     Route::post('/api-token-check', 'ApiTokensController@check');
+});
+
+
+Route::prefix('v1/admin')->namespace('v1\admin')->middleware(['auth:api', 'role:management-lawyers'])->group(function () {
+    Route::post('/lawyer/register', 'LawyersController@store');
 });
