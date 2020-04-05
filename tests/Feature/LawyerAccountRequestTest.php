@@ -19,7 +19,6 @@ class LawyerAccountRequestTest extends TestCase
 
         $this->postJson('api/v1/lawyer/register', [
             'name' => 'John Doe',
-            "gender" => GenderStatusManagement::STATUS_MALE,
             'license_number' => '1234567',
             'national_no' => '1234567890',
             'province' => 'tehran',
@@ -41,7 +40,6 @@ class LawyerAccountRequestTest extends TestCase
     {
         $this->postJson('api/v1/lawyer/register', [
             'name' => null,
-            "gender" => GenderStatusManagement::STATUS_MALE,
             'license_number' => '1234567',
             'national_no' => '1234567890',
             'province' => 'tehran',
@@ -57,7 +55,6 @@ class LawyerAccountRequestTest extends TestCase
     {
         $this->postJson('api/v1/lawyer/register', [
             'name' => 'John Doe',
-            "gender" => GenderStatusManagement::STATUS_MALE,
             'license_number' => null,
             'national_no' => '1234567890',
             'province' => 'tehran',
@@ -73,7 +70,6 @@ class LawyerAccountRequestTest extends TestCase
     {
         $this->postJson('api/v1/lawyer/register', [
             'name' => 'John Doe',
-            "gender" => GenderStatusManagement::STATUS_MALE,
             'license_number' => '123456',
             'national_no' => null,
             'province' => 'tehran',
@@ -89,7 +85,6 @@ class LawyerAccountRequestTest extends TestCase
     {
         $this->postJson('api/v1/lawyer/register', [
             'name' => 'John Doe',
-            "gender" => GenderStatusManagement::STATUS_MALE,
             'license_number' => '123456',
             'national_no' => '1234567890',
             'province' => null,
@@ -105,7 +100,6 @@ class LawyerAccountRequestTest extends TestCase
     {
         $this->postJson('api/v1/lawyer/register', [
             'name' => 'John Doe',
-            "gender" => GenderStatusManagement::STATUS_MALE,
             'license_number' => '123456',
             'national_no' => '1234567890',
             'province' => 'tehran',
@@ -121,7 +115,6 @@ class LawyerAccountRequestTest extends TestCase
     {
         $this->postJson('api/v1/lawyer/register', [
             'name' => 'John Doe',
-            "gender" => GenderStatusManagement::STATUS_MALE,
             'license_number' => '123456',
             'national_no' => '1234567890',
             'province' => 'tehran',
@@ -137,7 +130,6 @@ class LawyerAccountRequestTest extends TestCase
     {
         $this->postJson('api/v1/lawyer/register', [
             'name' => 'John Doe',
-            "gender" => GenderStatusManagement::STATUS_MALE,
             'license_number' => '123456',
             'national_no' => '1234567890',
             'province' => 'tehran',
@@ -153,7 +145,6 @@ class LawyerAccountRequestTest extends TestCase
     {
         $this->postJson('api/v1/lawyer/register', [
             'name' => 'John Doe',
-            "gender" => GenderStatusManagement::STATUS_MALE,
             'license_number' => '123456',
             'national_no' => '1234567890',
             'province' => 'tehran',
