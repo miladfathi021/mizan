@@ -2,35 +2,57 @@
 
 namespace App\Http\Controllers\Api\v1\lawyer;
 
+use App\Events\AccountInformationToLawyerEvent;
 use App\Http\Controllers\Controller;
-use App\LawyerAccountRequest;
+use App\Lawyer;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
 
 class LawyersController extends Controller
 {
-    /**
-     * create a new lawyer account request.
-     *
-     * @return \Illuminate\Http\JsonResponse
-     */
     public function store()
     {
-        $validate = request()->validate([
+
+        request()->validate([
             'name' => 'required',
+            'phone' => 'required',
             'license_number' => 'required',
             'national_no' => 'required',
             'province' => 'required',
             'city' => 'required',
-            'phone' => 'required',
-            'lawyer_experience' => 'required',
-            'internet_consultation' => 'required',
+            'lawyer_experience' => 'required'
         ]);
 
-        LawyerAccountRequest::create($validate);
+        $user = User::where('phone', request()->phone)->first();
+        $password = Str::random(7);
+
+        if (!$user) {
+
+            $user = User::create([
+                'name' => request()->name,
+                'phone' => request()->phone,
+                'password' => Hash::make($password)
+            ]);
+        }
+
+        $lawyer = $user->lawyer()->create([
+            'gender' => request()->gender,
+            'license_number' => request()->license_number,
+            'national_no' => request()->national_no,
+            'province' => request()->province,
+            'city' => request()->city,
+            'lawyer_experience' => request()->lawyer_experience,
+        ]);
+
+        event(new AccountInformationToLawyerEvent($user, $password));
 
         return response()->json([
+            'user' => $user,
+            'message' => 'حساب برای وکیل ایجاد شد.',
             'status' => 201,
-            'message' => request()->name . ' عزیز درخواست شما با موفقیت ارسال شد, همکاران ما به زودی با شما تماس خواهند گرفت.'
-        ]);
+        ], 201);
+
     }
 }

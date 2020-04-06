@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\LawyerAccountRequest;
+use App\Mizan\Lawyer\GenderStatusManagement;
 use App\Permission;
 use App\Role;
 use App\User;
@@ -30,7 +31,7 @@ class LawyerRegisterTest extends TestCase
 
         $this->postJson('/api/v1/admin/lawyer/register', [
             "name" => $lawyer_request->name,
-            "gender" => $lawyer_request->gender,
+            "gender" => GenderStatusManagement::STATUS_MALE,
             "license_number" => $lawyer_request->license_number,
             "national_no" => $lawyer_request->national_no,
             "province" => $lawyer_request->province,
@@ -62,7 +63,7 @@ class LawyerRegisterTest extends TestCase
 
         $this->postJson('/api/v1/admin/lawyer/register', [
             "name" => null,
-            "gender" => $lawyer_request->gender,
+            "gender" => GenderStatusManagement::STATUS_MALE,
             "license_number" => $lawyer_request->license_number,
             "national_no" => $lawyer_request->national_no,
             "province" => $lawyer_request->province,
@@ -83,7 +84,7 @@ class LawyerRegisterTest extends TestCase
 
         $this->postJson('/api/v1/admin/lawyer/register', [
             "name" => $lawyer_request->name,
-            "gender" => $lawyer_request->gender,
+            "gender" => GenderStatusManagement::STATUS_MALE,
             "license_number" => null,
             "national_no" => $lawyer_request->national_no,
             "province" => $lawyer_request->province,
@@ -104,7 +105,7 @@ class LawyerRegisterTest extends TestCase
 
         $this->postJson('/api/v1/admin/lawyer/register', [
             "name" => $lawyer_request->name,
-            "gender" => $lawyer_request->gender,
+            "gender" => GenderStatusManagement::STATUS_MALE,
             "license_number" => $lawyer_request->license_number,
             "national_no" => null,
             "province" => $lawyer_request->province,
@@ -125,7 +126,7 @@ class LawyerRegisterTest extends TestCase
 
         $this->postJson('/api/v1/admin/lawyer/register', [
             "name" => $lawyer_request->name,
-            "gender" => $lawyer_request->gender,
+            "gender" => GenderStatusManagement::STATUS_MALE,
             "license_number" => $lawyer_request->license_number,
             "national_no" => $lawyer_request->national_no,
             "province" => null,
@@ -146,7 +147,7 @@ class LawyerRegisterTest extends TestCase
 
         $this->postJson('/api/v1/admin/lawyer/register', [
             "name" => $lawyer_request->name,
-            "gender" => $lawyer_request->gender,
+            "gender" => GenderStatusManagement::STATUS_MALE,
             "license_number" => $lawyer_request->license_number,
             "national_no" => $lawyer_request->national_no,
             "province" => $lawyer_request->province,
@@ -180,7 +181,7 @@ class LawyerRegisterTest extends TestCase
 
         $this->postJson('/api/v1/admin/lawyer/register', [
             "name" => $lawyer_request->name,
-            "gender" => $lawyer_request->gender,
+            "gender" => GenderStatusManagement::STATUS_MALE,
             "license_number" => $lawyer_request->license_number,
             "national_no" => $lawyer_request->national_no,
             "province" => $lawyer_request->province,

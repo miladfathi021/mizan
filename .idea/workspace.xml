@@ -2,10 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5230ede0-cb53-41ab-80e8-27fa5808bb1f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/lawyer/LawyerAccountRequestController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/LawyerAccountRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/LawyerAccountRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_10_202411_create_lawyer_account_request_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_10_202411_create_lawyer_account_request_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/LawyerAccountRequestTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/LawyerAccountRequestTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/admin/LawyersController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/lawyer/LawyersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/lawyer/LawyersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/LawyerAccountRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/LawyerAccountRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/UserRegisterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/UserRegisterTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,32 +169,32 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Http/Controllers/Api/v1/lawyer" />
       <recent name="$PROJECT_DIR$/app/Models/Phone" />
       <recent name="$PROJECT_DIR$/app/Models/Users" />
       <recent name="$PROJECT_DIR$/app/Models/Roles" />
       <recent name="$PROJECT_DIR$/resources/js/components/global" />
-      <recent name="$PROJECT_DIR$/resources/js/components/register-login" />
     </key>
   </component>
-  <component name="RunManager" selected="PHPUnit.LawyerAccountRequestTest">
-    <configuration name="LawyerAccountRequestTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\LawyerAccountRequestTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LawyerAccountRequestTest.php" scope="Class" />
+  <component name="RunManager" selected="PHPUnit.Feature">
+    <configuration name="Feature" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner configuration_file="$PROJECT_DIR$/phpunit.xml" directory="$PROJECT_DIR$/tests/Feature" />
       <method v="2" />
     </configuration>
     <configuration name="LawyerRegisterTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
       <TestRunner class="Tests\Feature\LawyerRegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="LawyerRegisterTest.Manager_can_create_a_account_for_a_new_lawyer" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\LawyerRegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" method="Manager_can_create_a_account_for_a_new_lawyer" scope="Method" />
+    <configuration name="PhoneVerificationTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\PhoneVerificationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" scope="Class" />
       <method v="2" />
     </configuration>
-    <configuration name="LawyerRegisterTest.Only_the_manager_can_create_a_new_account_for_the_lawyer" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\LawyerRegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" method="Only_the_manager_can_create_a_new_account_for_the_lawyer" scope="Method" />
+    <configuration name="PhoneVerificationTest.The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\PhoneVerificationTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" method="The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="LawyerRegisterTest.city_phone_and_lawyer_experience_is_required" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\LawyerRegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" method="city_phone_and_lawyer_experience_is_required" scope="Method" />
+    <configuration name="UserRegisterTest.The_user_can_create_a_new_account_after_confirming_the_mobile_number" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\UserRegisterTest" configuration_file="$PROJECT_DIR$/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/UserRegisterTest.php" method="The_user_can_create_a_new_account_after_confirming_the_mobile_number" scope="Method" />
       <method v="2" />
     </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -198,10 +203,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="PHPUnit.LawyerAccountRequestTest" />
-        <item itemvalue="PHPUnit.LawyerRegisterTest.Manager_can_create_a_account_for_a_new_lawyer" />
-        <item itemvalue="PHPUnit.LawyerRegisterTest.Only_the_manager_can_create_a_new_account_for_the_lawyer" />
-        <item itemvalue="PHPUnit.LawyerRegisterTest.city_phone_and_lawyer_experience_is_required" />
+        <item itemvalue="PHPUnit.Feature" />
+        <item itemvalue="PHPUnit.UserRegisterTest.The_user_can_create_a_new_account_after_confirming_the_mobile_number" />
+        <item itemvalue="PHPUnit.PhoneVerificationTest" />
+        <item itemvalue="PHPUnit.PhoneVerificationTest.The_user_can_no_longer_send_the_code_request_if_the_code_is_confirmed" />
         <item itemvalue="PHPUnit.LawyerRegisterTest" />
       </list>
     </recent_temporary>
@@ -270,42 +275,42 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="212" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1440.900@0.0.1440.900" timestamp="1586009214981" />
-    <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1586075482013">
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom" timestamp="1586193780921">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586075482013" />
+    <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1586193780921" />
     <state width="1440" height="255" key="GridCell.Tab.0.bottom/0.23.1440.802@0.23.1440.802" timestamp="1585254133563" />
-    <state width="1440" height="255" key="GridCell.Tab.0.center" timestamp="1586075482011">
+    <state width="1440" height="255" key="GridCell.Tab.0.center" timestamp="1586193780919">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586075482011" />
+    <state width="1440" height="255" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1586193780919" />
     <state width="1440" height="255" key="GridCell.Tab.0.center/0.23.1440.802@0.23.1440.802" timestamp="1585254133561" />
-    <state width="1440" height="255" key="GridCell.Tab.0.left" timestamp="1586075482009">
+    <state width="1440" height="255" key="GridCell.Tab.0.left" timestamp="1586193780918">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586075482009" />
+    <state width="1440" height="255" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1586193780918" />
     <state width="1440" height="255" key="GridCell.Tab.0.left/0.23.1440.802@0.23.1440.802" timestamp="1585254133560" />
-    <state width="1440" height="255" key="GridCell.Tab.0.right" timestamp="1586075482012">
+    <state width="1440" height="255" key="GridCell.Tab.0.right" timestamp="1586193780920">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1440" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586075482012" />
+    <state width="1440" height="255" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1586193780920" />
     <state width="1440" height="255" key="GridCell.Tab.0.right/0.23.1440.802@0.23.1440.802" timestamp="1585254133562" />
     <state x="497" y="257" key="NewPhpClassDialog" timestamp="1586014071402">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="497" y="257" key="NewPhpClassDialog/0.0.1440.900@0.0.1440.900" timestamp="1586014071402" />
-    <state width="500" height="445" key="SwitcherDM" timestamp="1586075487997">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1586193216308">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1586075487997" />
+    <state width="500" height="445" key="SwitcherDM/0.0.1440.900@0.0.1440.900" timestamp="1586193216308" />
     <state width="500" height="445" key="SwitcherDM/0.23.1440.802@0.23.1440.802" timestamp="1585918005480" />
     <state x="482" y="71" key="refactoring.ChangeSignatureDialog" timestamp="1583566748473">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="482" y="71" key="refactoring.ChangeSignatureDialog/0.0.1440.900@0.0.1440.900" timestamp="1583566748473" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1586073961794">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1586192123801">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1586073961794" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1586192123801" />
   </component>
 </project>

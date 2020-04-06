@@ -38,7 +38,7 @@ class PhoneVerificationTest extends TestCase
 
         $this->postJson('/api/v1/phone-verification', [
             'phone' => $code->phone,
-        ])->assertJson(['status' => 200, 'phone' => $code->phone]);
+        ])->assertJson(['status' => 201, 'phone' => $code->phone]);
     }
 
     /** @test **/
@@ -119,24 +119,6 @@ class PhoneVerificationTest extends TestCase
     {
         $this->postJson('/api/v1/success-phone-verification', [
             'code' => 'test',
-            'phone' => '09123456789',
-        ])->assertJsonValidationErrors(['code']);
-    }
-
-    /** @test **/
-    public function code_should_be_at_least_4_number()
-    {
-        $this->postJson('/api/v1/success-phone-verification', [
-            'code' => 123,
-            'phone' => '09123456789',
-        ])->assertJsonValidationErrors(['code']);
-    }
-
-    /** @test **/
-    public function code_should_be_at_most_4_number()
-    {
-        $this->postJson('/api/v1/success-phone-verification', [
-            'code' => 12345,
             'phone' => '09123456789',
         ])->assertJsonValidationErrors(['code']);
     }

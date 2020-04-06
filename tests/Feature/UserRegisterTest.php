@@ -6,6 +6,7 @@ use App\PhoneVerification;
 use App\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Support\Facades\Artisan;
 use Tests\TestCase;
 
 class UserRegisterTest extends TestCase
@@ -16,7 +17,7 @@ class UserRegisterTest extends TestCase
     public function The_user_can_create_a_new_account_after_confirming_the_mobile_number()
     {
         $this->withoutExceptionHandling();
-
+        Artisan::call('passport:install');
         $phone = factory(PhoneVerification::class)->create(['status' => 1]);
 
         $this->postJson('api/v1/register', [

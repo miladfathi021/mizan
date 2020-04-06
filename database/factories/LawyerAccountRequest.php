@@ -8,7 +8,6 @@ use Faker\Generator as Faker;
 $factory->define(LawyerAccountRequest::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
-        'gender' => $faker->numberBetween($min = 1, $max = 2),
         'license_number' => $faker->numberBetween($min = 1234567, $max = 9876543),
         'national_no' => $faker->numberBetween($min = 1234567890, $max = 9876543211),
         'province' => $faker->state,

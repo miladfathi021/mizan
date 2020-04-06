@@ -16,16 +16,13 @@ Route::prefix('v1')->namespace('v1\users')->group(function () {
 });
 
 // Lawyer Account Request
-Route::prefix('v1/lawyer')->namespace('v1\lawyer')->group(function () {
-    Route::post('/register', 'LawyersController@store');
+Route::prefix('v1')->namespace('v1\lawyer')->group(function () {
+    Route::post('/lawyer/register', 'LawyerAccountRequestController@store');
+    Route::post('/admin/lawyer/register', 'LawyersController@store')->middleware(['auth:api', 'role:management-lawyers']);
+
 });
 
 // Check token => Helpers
 Route::prefix('v1')->namespace('v1\helpers')->middleware(['auth:api'])->group(function () {
     Route::post('/api-token-check', 'ApiTokensController@check');
-});
-
-
-Route::prefix('v1/admin')->namespace('v1\admin')->group(function () {
-    Route::post('/lawyer/register', 'LawyersController@store')->middleware(['auth:api', 'role:management-lawyers']);
 });
