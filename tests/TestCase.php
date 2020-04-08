@@ -35,8 +35,8 @@ abstract class TestCase extends BaseTestCase
 
 
         $role->permissions()->attach($permission);
-        $user->permissions()->attach($role);
-        $user->roles()->attach($permission);
+        $user->permissions()->attach($permission);
+        $user->roles()->attach($role);
 
         return;
     }

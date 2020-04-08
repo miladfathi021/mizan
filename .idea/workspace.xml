@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5230ede0-cb53-41ab-80e8-27fa5808bb1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/lawyer/LawyerAccountRequestController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/admin/LawyersController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/lawyer/LawyersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/v1/lawyer/LawyersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/LawyerAccountRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/LawyerAccountRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/LawyerRegisterTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/PhoneVerificationTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/UserRegisterTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/UserRegisterTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/TestCase.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
