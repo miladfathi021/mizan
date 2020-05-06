@@ -15,6 +15,8 @@ class LawyersController extends Controller
     public function store()
     {
 
+        $this->authorize('create-lawyer');
+
         request()->validate([
             'name' => 'required',
             'phone' => 'required',
